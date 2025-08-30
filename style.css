@@ -129,6 +129,12 @@ a:hover {
   color: var(--color-grey);
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .text--bold {
   font-weight: var(--font-weight-bold);
 }
@@ -141,6 +147,9 @@ a:hover {
   text-transform: var(--text-transform-uppercase);
 }
 
+/*--------------*/
+/* Produktsiden */
+/*--------------*/
 .review {
   margin-top: var(--spacing-xs-px);
   margin-bottom: var(--spacing-xs-px);
@@ -169,3 +178,12 @@ a:hover {
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-bold);
 }
+
+
+.product-main {
+  display: flex;
+  gap: var(--spacing-l-px);
+  padding: var(--spacing-l-px);
+  
+}
+
