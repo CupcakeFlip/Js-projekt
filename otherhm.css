@@ -1,0 +1,1566 @@
+/* H&M CSS, kan bruges som reference */
+
+:root {
+  --base-background-default: #fff;
+  --base-background-card: #fff;
+  --base-background-overlay: rgba(0, 0, 0, 0.75);
+  --base-background-footer: #fff;
+  --base-background-row-alternate: #d9d9d9;
+  --base-background-row-hover: #f8f8f8;
+  --base-background-selected: #fff;
+  --base-background-success: #00bc65;
+  --base-background-error: #f4422b;
+  --base-background-warning: #ff9c00;
+  --base-background-info: #d9d9d9;
+  --base-text: #000;
+  --base-text-meta: #000;
+  --base-text-placeholder: #737479;
+  --base-text-disabled: #666666;
+  --base-primary-interactive: #000;
+  --base-primary-interactive-active: #555555;
+  --base-primary-interactive-hover: #555555;
+  --base-primary-interactive-visited: #737479;
+  --base-secondary-interactive: #757575;
+  --base-secondary-interactive-active: #000;
+  --base-secondary-interactive-hover: #555555;
+  --base-tertiary-interactive: #d9d9d9;
+  --base-tertiary-interactive-active: #000;
+  --base-tertiary-interactive-hover: #000;
+  --base-tertiary-interactive-disabled: #737479;
+  --base-quaternary-interactive: #000;
+  --base-quaternary-interactive-active: #000;
+  --base-quaternary-interactive-hover: #555555;
+  --base-quaternary-interactive-disabled: #737479;
+  --base-primary-reverse: #fff;
+  --base-primary-reverse-interactive-active: #f8f8f8;
+  --base-primary-reverse-interactive-hover: #f8f8f8;
+  --base-interactive-disabled: #e4e4e4;
+  --base-validation-success: #008744;
+  --base-validation-error: #d6001c;
+  --base-notification: #e50010;
+  --base-favourite: #e50010;
+  --base-background-skeleton: #f5f5f5;
+  --base-z-axis-shadow: #fff;
+  --product-sale: #e50010;
+  --product-sustainability: #000;
+  --product-new: #000;
+  --product-offer-product-marker: #f5f5f5;
+  --product-membership: #d3dfe8;
+  --product-online-exclusive: #000;
+  --product-scarcity: #e50010;
+  --base-brand-logo: #e50010;
+  --base-decoration-primary: #000;
+  --base-decoration-secondary: #d9d9d9;
+  --energy-class-app: #27974f;
+  --energy-class-ap: #59ad4f;
+  --energy-class-a: #bbce4c;
+  --energy-class-b: #ffed42;
+  --energy-class-c: #f0b041;
+  --energy-class-d: #de6637;
+  --energy-class-e: #d22531;
+  --color-paypal-blue: #223954;
+  --color-paypal-blue-light: #169bd7;
+  --color-kakao-yellow: #fee500;
+  --color-kakao-yellow-active: #f0d700;
+  --color-kakao-text: rgba(0, 0, 0, 0.85);
+  --color-kakao-icon: #000;
+  --color-facebook: #39579b;
+  --color-twitter: #1ea9e3;
+  --color-pinterest: #cd1d1e;
+  --color-instagram: #125688;
+  --color-spotify: #00e461;
+  --color-snapchat: #fffc00;
+  --color-tumblr: #35465c;
+  --color-google-plus: #d34836;
+  --color-youtube: #f00;
+  --color-linkedin: #0077b7;
+  --tag-swatch-beige: #eccc9b;
+  --tag-swatch-black: #000000;
+  --tag-swatch-blue: #0000ff;
+  --tag-swatch-bronze: #cd7f32;
+  --tag-swatch-brown: #a52a2a;
+  --tag-swatch-gold: #d89a00;
+  --tag-swatch-green: #008000;
+  --tag-swatch-grey: #808080;
+  --tag-swatch-orange: #ffa500;
+  --tag-swatch-pink: #ffc0cb;
+  --tag-swatch-purple: #800080;
+  --tag-swatch-red: #ff0000;
+  --tag-swatch-silver: #c0c0c0;
+  --tag-swatch-turquoise: #40e0d0;
+  --tag-swatch-white: #ffffff;
+  --tag-swatch-yellow: #ffda00;
+  --focus-fallback: #0091ff;
+  --high-contrast-dark: #000000;
+  --high-contrast-light: #ffffff;
+  --interactive-border-radius: 0;
+  --interactive-border-width: 1px;
+  --card-border-radius: 0;
+  --card-border-width: 0px;
+  --section-border-radius: 0;
+  --section-border-width: 0px;
+  --shadow-interactive-default-xAxis: 0px;
+  --shadow-interactive-default-yAxis: 0px;
+  --shadow-interactive-default-blur: 0px;
+  --shadow-interactive-default-spread: 0px;
+  --shadow-interactive-default-color: #000;
+  --shadow-interactive-hover-xAxis: 0px;
+  --shadow-interactive-hover-yAxis: 0px;
+  --shadow-interactive-hover-blur: 0px;
+  --shadow-interactive-hover-spread: 0px;
+  --shadow-interactive-hover-color: #000;
+  --shadow-interactive-active-xAxis: 0px;
+  --shadow-interactive-active-yAxis: 0px;
+  --shadow-interactive-active-blur: 0px;
+  --shadow-interactive-active-spread: 0px;
+  --shadow-interactive-active-color: #000;
+  --shadow-static-xAxis: 0px;
+  --shadow-static-yAxis: 12px;
+  --shadow-static-blur: 32px;
+  --shadow-static-spread: 0px;
+  --shadow-static-color: rgba(0, 0, 0, 0.1);
+  --editorial-display-quote-font-family: "HM Sergel", "Garamond",
+    "Times New Roman", Times, serif;
+  --editorial-display-quote-font-weight: 400;
+  --editorial-display-quote-text-transform: none;
+  --editorial-display-quote-default-size-line-height-number: 1.5;
+  --editorial-display-quote-default-size-line-height-px: 66px;
+  --editorial-display-quote-default-size-line-height-rem: 4.125rem;
+  --editorial-display-quote-default-size-font-size-rem: 2.75rem;
+  --editorial-display-quote-default-size-font-size-px: 44px;
+  --editorial-display-quote-default-size-font-size-pt: 33;
+  --editorial-display-quote-breakpoint-medium-line-height-number: 1.199596774;
+  --editorial-display-quote-breakpoint-medium-line-height-px: 119px;
+  --editorial-display-quote-breakpoint-medium-line-height-rem: 7.438rem;
+  --editorial-display-quote-breakpoint-medium-font-size-rem: 6.2rem;
+  --editorial-display-quote-breakpoint-medium-font-size-px: 99.2px;
+  --editorial-display-quote-breakpoint-medium-font-size-pt: 74;
+  --editorial-preamble-font-family: "HM Sergel Headline", "Garamond",
+    "Times New Roman", Times, serif;
+  --editorial-preamble-font-weight: 400;
+  --editorial-preamble-text-transform: none;
+  --editorial-preamble-font-style: normal;
+  --editorial-preamble-default-size-line-height-number: 1.05;
+  --editorial-preamble-default-size-line-height-px: 25.2px;
+  --editorial-preamble-default-size-line-height-rem: 1.575rem;
+  --editorial-preamble-default-size-font-size-rem: 1.5rem;
+  --editorial-preamble-default-size-font-size-px: 24px;
+  --editorial-preamble-default-size-font-size-pt: 12;
+  --editorial-preamble-breakpoint-medium-line-height-number: 1;
+  --editorial-preamble-breakpoint-medium-line-height-px: 60px;
+  --editorial-preamble-breakpoint-medium-line-height-rem: 3.75rem;
+  --editorial-preamble-breakpoint-medium-font-size-rem: 3.75rem;
+  --editorial-preamble-breakpoint-medium-font-size-px: 60px;
+  --editorial-preamble-breakpoint-medium-font-size-pt: 45;
+  --editorial-body-text-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --editorial-body-text-font-weight: 400;
+  --editorial-body-text-text-transform: none;
+  --editorial-body-text-font-variation-settings: "wght" 400, "wdth" 100,
+    "TITL" 0;
+  --editorial-body-text-default-size-line-height-number: 1.3;
+  --editorial-body-text-default-size-line-height-px: 20.8px;
+  --editorial-body-text-default-size-line-height-rem: 1.3rem;
+  --editorial-body-text-default-size-font-size-rem: 1rem;
+  --editorial-body-text-default-size-font-size-px: 16px;
+  --editorial-body-text-default-size-font-size-pt: 12;
+  --editorial-text-link-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --editorial-text-link-font-weight: 400;
+  --editorial-text-link-text-transform: none;
+  --editorial-text-link-text-decoration: underline;
+  --editorial-text-link-font-variation-settings: "wght" 400, "wdth" 100,
+    "TITL" 0;
+  --editorial-text-link-default-size-line-height-number: 1.3;
+  --editorial-text-link-default-size-line-height-px: 16.9px;
+  --editorial-text-link-default-size-line-height-rem: 1.0562rem;
+  --editorial-text-link-default-size-font-size-rem: 0.8125rem;
+  --editorial-text-link-default-size-font-size-px: 13px;
+  --editorial-text-link-default-size-font-size-pt: 9.75;
+  --editorial-headline-font-family: "HM Sergel Headline", "Garamond",
+    "Times New Roman", Times, serif;
+  --editorial-headline-font-weight: 400;
+  --editorial-headline-font-style: normal;
+  --editorial-headline-text-transform: none;
+  --editorial-headline-default-size-line-height-number: 1;
+  --editorial-headline-default-size-line-height-px: 36px;
+  --editorial-headline-default-size-line-height-rem: 2.25rem;
+  --editorial-headline-default-size-font-size-rem: 2.25rem;
+  --editorial-headline-default-size-font-size-px: 36px;
+  --editorial-headline-default-size-font-size-pt: 27;
+  --editorial-headline-breakpoint-medium-line-height-number: 1;
+  --editorial-headline-breakpoint-medium-line-height-px: 88px;
+  --editorial-headline-breakpoint-medium-line-height-rem: 5.5rem;
+  --editorial-headline-breakpoint-medium-font-size-rem: 5.5rem;
+  --editorial-headline-breakpoint-medium-font-size-px: 88px;
+  --editorial-headline-breakpoint-medium-font-size-pt: 66;
+  --body-text-default-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --body-text-default-font-weight: 400;
+  --body-text-default-text-transform: none;
+  --body-text-default-font-variation-settings: "wght" 400, "wdth" 100, "TITL" 0;
+  --body-text-default-default-size-line-height-number: 1.3;
+  --body-text-default-default-size-line-height-px: 16.9px;
+  --body-text-default-default-size-line-height-rem: 1.0562rem;
+  --body-text-default-default-size-font-size-rem: 0.8125rem;
+  --body-text-default-default-size-font-size-px: 13px;
+  --body-text-default-default-size-font-size-pt: 9.75;
+  --body-text-meta-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --body-text-meta-font-weight: 400;
+  --body-text-meta-text-transform: none;
+  --body-text-meta-font-variation-settings: "wght" 400, "wdth" 100, "TITL" 0;
+  --body-text-meta-default-size-line-height-number: 1.3;
+  --body-text-meta-default-size-line-height-px: 14.3px;
+  --body-text-meta-default-size-line-height-rem: 0.8938rem;
+  --body-text-meta-default-size-font-size-rem: 0.6875rem;
+  --body-text-meta-default-size-font-size-px: 11px;
+  --body-text-paragraph-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --body-text-paragraph-font-weight: 400;
+  --body-text-paragraph-font-variation-settings: "wght" 400, "wdth" 100,
+    "TITL" 0;
+  --body-text-paragraph-text-transform: none;
+  --body-text-paragraph-default-size-line-height-number: 1.3;
+  --body-text-paragraph-default-size-line-height-px: 19.5px;
+  --body-text-paragraph-default-size-line-height-rem: 1.2188rem;
+  --body-text-paragraph-default-size-font-size-rem: 0.8125rem;
+  --body-text-paragraph-default-size-font-size-px: 13px;
+  --body-text-paragraph-default-size-font-size-pt: 9.75;
+  --body-text-preamble-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --body-text-preamble-font-weight: 400;
+  --body-text-preamble-text-transform: none;
+  --body-text-preamble-font-variation-settings: "wght" 400, "wdth" 100, "TITL" 0;
+  --body-text-preamble-default-size-line-height-number: 1.3;
+  --body-text-preamble-default-size-line-height-px: 18.2px;
+  --body-text-preamble-default-size-line-height-rem: 1.1375rem;
+  --body-text-preamble-default-size-font-size-rem: 0.875rem;
+  --body-text-preamble-default-size-font-size-px: 14px;
+  --body-text-preamble-default-size-font-size-pt: 10.5;
+  --heading-xs-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --heading-xs-font-weight: 400;
+  --heading-xs-text-transform: uppercase;
+  --heading-xs-font-variation-settings: "wght" 400, "wdth" 120, "TITL" 0;
+  --heading-xs-default-size-line-height-number: 1.3;
+  --heading-xs-default-size-line-height-px: 15.6px;
+  --heading-xs-default-size-line-height-rem: 0.975rem;
+  --heading-xs-default-size-font-size-rem: 0.75rem;
+  --heading-xs-default-size-font-size-px: 12px;
+  --heading-s-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --heading-s-font-weight: 400;
+  --heading-s-text-transform: uppercase;
+  --heading-s-font-variation-settings: "wght" 600, "wdth" 120, "TITL" 0;
+  --heading-s-default-size-line-height-number: 1.3;
+  --heading-s-default-size-line-height-px: 15.6px;
+  --heading-s-default-size-line-height-rem: 0.975rem;
+  --heading-s-default-size-font-size-rem: 0.75rem;
+  --heading-s-default-size-font-size-px: 12px;
+  --heading-m-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --heading-m-font-weight: 400;
+  --heading-m-text-transform: uppercase;
+  --heading-m-font-variation-settings: "wght" 600, "wdth" 120, "TITL" 0;
+  --heading-m-default-size-line-height-number: 1.3;
+  --heading-m-default-size-line-height-px: 20.8px;
+  --heading-m-default-size-line-height-rem: 1.3rem;
+  --heading-m-default-size-font-size-rem: 1rem;
+  --heading-m-default-size-font-size-px: 16px;
+  --heading-l-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --heading-l-font-weight: 400;
+  --heading-l-text-transform: uppercase;
+  --heading-l-font-variation-settings: "wght" 600, "wdth" 120, "TITL" 1;
+  --heading-l-default-size-line-height-number: 1.1;
+  --heading-l-default-size-line-height-px: 26.4px;
+  --heading-l-default-size-line-height-rem: 1.65rem;
+  --heading-l-default-size-font-size-rem: 1.5rem;
+  --heading-l-default-size-font-size-px: 24px;
+  --heading-l-default-size-font-size-pt: 18;
+  --heading-l-breakpoint-medium-line-height-number: 1.1;
+  --heading-l-breakpoint-medium-line-height-px: 35.2px;
+  --heading-l-breakpoint-medium-line-height-rem: 2.2rem;
+  --heading-l-breakpoint-medium-font-size-rem: 2rem;
+  --heading-l-breakpoint-medium-font-size-px: 32px;
+  --heading-xl-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --heading-xl-font-weight: 400;
+  --heading-xl-text-transform: uppercase;
+  --heading-xl-font-variation-settings: "wght" 700, "wdth" 140, "TITL" 1;
+  --heading-xl-default-size-line-height-number: 1.1;
+  --heading-xl-default-size-line-height-px: 26.4px;
+  --heading-xl-default-size-line-height-rem: 1.65rem;
+  --heading-xl-default-size-font-size-rem: 1.5rem;
+  --heading-xl-default-size-font-size-px: 24px;
+  --heading-xl-default-size-font-size-pt: 18;
+  --heading-xl-breakpoint-medium-line-height-number: 1.1;
+  --heading-xl-breakpoint-medium-line-height-px: 35.2px;
+  --heading-xl-breakpoint-medium-line-height-rem: 2.2rem;
+  --heading-xl-breakpoint-medium-font-size-rem: 2rem;
+  --heading-xl-breakpoint-medium-font-size-px: 32px;
+  --heading-pre-heading-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --heading-pre-heading-font-weight: 400;
+  --heading-pre-heading-text-transform: uppercase;
+  --heading-pre-heading-font-variation-settings: "wght" 600, "wdth" 120,
+    "TITL" 1;
+  --heading-pre-heading-default-size-line-height-number: 1.1;
+  --heading-pre-heading-default-size-line-height-px: 26.4px;
+  --heading-pre-heading-default-size-line-height-rem: 1.65rem;
+  --heading-pre-heading-default-size-font-size-rem: 1.5rem;
+  --heading-pre-heading-default-size-font-size-px: 24px;
+  --heading-pre-heading-default-size-font-size-pt: 18;
+  --display-default-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --display-default-font-weight: 400;
+  --display-default-text-transform: uppercase;
+  --display-default-letter-spacing: -0.02px;
+  --display-default-font-variation-settings: "wght" 700, "wdth" 140, "TITL" 1;
+  --display-default-default-size-line-height-number: 1.1;
+  --display-default-default-size-line-height-px: 39.6px;
+  --display-default-default-size-line-height-rem: 2.475rem;
+  --display-default-default-size-font-size-rem: 2.25rem;
+  --display-default-default-size-font-size-px: 36px;
+  --display-default-default-size-font-size-pt: 27;
+  --display-default-breakpoint-medium-line-height-number: 1.1;
+  --display-default-breakpoint-medium-line-height-px: 105.6px;
+  --display-default-breakpoint-medium-line-height-rem: 6.6rem;
+  --display-default-breakpoint-medium-font-size-rem: 6rem;
+  --display-default-breakpoint-medium-font-size-px: 96px;
+  --display-default-breakpoint-medium-font-size-pt: 7;
+  --price-original-default-font-family: "HM Slussen",
+    "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3", "Hiragino Kaku Gothic Pro", Osaka,
+    "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo, "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --price-original-default-font-weight: 400;
+  --price-original-default-text-transform: none;
+  --price-original-default-text-decoration: line-through;
+  --price-original-default-font-variation-settings: "wght" 400, "wdth" 120,
+    "TITL" 0;
+  --price-original-default-default-size-line-height-number: 1.3;
+  --price-original-default-default-size-line-height-px: 15.6px;
+  --price-original-default-default-size-line-height-rem: 0.975rem;
+  --price-original-default-default-size-font-size-rem: 0.75rem;
+  --price-original-default-default-size-font-size-px: 12px;
+  --price-original-default-default-size-font-size-pt: 9;
+  --price-original-large-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --price-original-large-font-weight: 400;
+  --price-original-large-text-transform: none;
+  --price-original-large-text-decoration: line-through;
+  --price-original-large-font-variation-settings: "wght" 400, "wdth" 120,
+    "TITL" 0;
+  --price-original-large-default-size-line-height-number: 1.15;
+  --price-original-large-default-size-line-height-px: 18.4px;
+  --price-original-large-default-size-line-height-rem: 1.15rem;
+  --price-original-large-default-size-font-size-rem: 1rem;
+  --price-original-large-default-size-font-size-px: 16px;
+  --price-original-large-default-size-font-size-pt: 12;
+  --price-black-default-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --price-black-default-font-weight: 400;
+  --price-black-default-font-variation-settings: "wght" 600, "wdth" 120,
+    "TITL" 0;
+  --price-black-default-text-transform: none;
+  --price-black-default-default-size-line-height-number: 1.3;
+  --price-black-default-default-size-line-height-px: 15.6px;
+  --price-black-default-default-size-line-height-rem: 0.975rem;
+  --price-black-default-default-size-font-size-rem: 0.75rem;
+  --price-black-default-default-size-font-size-px: 12px;
+  --price-black-default-default-size-font-size-pt: 9;
+  --price-black-large-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --price-black-large-font-weight: 400;
+  --price-black-large-font-variation-settings: "wght" 600, "wdth" 120, "TITL" 0;
+  --price-black-large-text-transform: none;
+  --price-black-large-default-size-line-height-number: 1.15;
+  --price-black-large-default-size-line-height-px: 18.4px;
+  --price-black-large-default-size-line-height-rem: 1.15rem;
+  --price-black-large-default-size-font-size-rem: 1rem;
+  --price-black-large-default-size-font-size-px: 16px;
+  --price-black-large-default-size-font-size-pt: 12;
+  --price-previous-meta-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --price-previous-meta-font-weight: 400;
+  --price-previous-meta-text-transform: none;
+  --price-previous-meta-text-decoration: line-through;
+  --price-previous-meta-font-variation-settings: "wght" 400, "wdth" 120,
+    "TITL" 0;
+  --price-previous-meta-default-size-line-height-number: 1.3;
+  --price-previous-meta-default-size-line-height-px: 14.3px;
+  --price-previous-meta-default-size-line-height-rem: 0.8938rem;
+  --price-previous-meta-default-size-font-size-rem: 0.6875rem;
+  --price-previous-meta-default-size-font-size-px: 11px;
+  --price-previous-meta-default-size-font-size-pt: 8.25;
+  --label-form-label-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --label-form-label-font-weight: 400;
+  --label-form-label-text-transform: uppercase;
+  --label-form-label-font-variation-settings: "wght" 400, "wdth" 120, "TITL" 0;
+  --label-form-label-default-size-line-height-number: 1.3;
+  --label-form-label-default-size-line-height-px: 15.6px;
+  --label-form-label-default-size-line-height-rem: 0.975rem;
+  --label-form-label-default-size-font-size-rem: 0.75rem;
+  --label-form-label-default-size-font-size-px: 12px;
+  --label-form-label-default-size-font-size-pt: 9;
+  --interactive-navigation-parent-font-family: "HM Sergel", "Garamond",
+    "Times New Roman", Times, serif;
+  --interactive-navigation-parent-font-weight: 400;
+  --interactive-navigation-parent-text-transform: none;
+  --interactive-navigation-parent-text-decoration: none;
+  --interactive-navigation-parent-default-size-line-height-number: 1.25;
+  --interactive-navigation-parent-default-size-line-height-px: 20px;
+  --interactive-navigation-parent-default-size-line-height-rem: 1.25rem;
+  --interactive-navigation-parent-default-size-font-size-rem: 1rem;
+  --interactive-navigation-parent-default-size-font-size-px: 16px;
+  --interactive-navigation-parent-default-size-font-size-pt: 12;
+  --interactive-navigation-parent-breakpoint-medium-line-height-number: 1.2;
+  --interactive-navigation-parent-breakpoint-medium-line-height-px: 24px;
+  --interactive-navigation-parent-breakpoint-medium-line-height-rem: 1.5rem;
+  --interactive-navigation-parent-breakpoint-medium-font-size-rem: 1.25rem;
+  --interactive-navigation-parent-breakpoint-medium-font-size-px: 20px;
+  --interactive-navigation-parent-breakpoint-medium-font-size-pt: 15;
+  --interactive-navigation-child-font-family: "HM Sergel", "Garamond",
+    "Times New Roman", Times, serif;
+  --interactive-navigation-child-font-weight: 400;
+  --interactive-navigation-child-text-transform: none;
+  --interactive-navigation-child-text-decoration: none;
+  --interactive-navigation-child-default-size-line-height-number: 1.142;
+  --interactive-navigation-child-default-size-line-height-px: 16px;
+  --interactive-navigation-child-default-size-line-height-rem: 1rem;
+  --interactive-navigation-child-default-size-font-size-rem: 0.875rem;
+  --interactive-navigation-child-default-size-font-size-px: 14px;
+  --interactive-navigation-child-default-size-font-size-pt: 11;
+  --interactive-navigation-large-font-family: "HM Slussen",
+    "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3", "Hiragino Kaku Gothic Pro", Osaka,
+    "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo, "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --interactive-navigation-large-font-weight: 400;
+  --interactive-navigation-large-text-transform: uppercase;
+  --interactive-navigation-large-text-decoration: none;
+  --interactive-navigation-large-font-variation-settings: "wght" 700, "wdth" 140,
+    "TITL" 1;
+  --interactive-navigation-large-default-size-line-height-number: 1.1;
+  --interactive-navigation-large-default-size-line-height-px: 39.6px;
+  --interactive-navigation-large-default-size-line-height-rem: 2.475rem;
+  --interactive-navigation-large-default-size-font-size-rem: 2.25rem;
+  --interactive-navigation-large-default-size-font-size-px: 36px;
+  --interactive-navigation-large-default-size-font-size-pt: 27;
+  --interactive-navigation-large-breakpoint-medium-line-height-number: 1.1;
+  --interactive-navigation-large-breakpoint-medium-line-height-px: 39.6px;
+  --interactive-navigation-large-breakpoint-medium-line-height-rem: 2.475rem;
+  --interactive-navigation-large-breakpoint-medium-font-size-rem: 2.25rem;
+  --interactive-navigation-large-breakpoint-medium-font-size-px: 36px;
+  --interactive-navigation-large-breakpoint-medium-font-size-pt: 27;
+  --intertive-navigation-medium-font-family: "HM Slussen",
+    "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3", "Hiragino Kaku Gothic Pro", Osaka,
+    "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo, "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --interactive-navigation-medium-font-weight: 400;
+  --interactive-navigation-medium-font-variation-settings: "wght" 600,
+    "wdth" 120, "TITL" 1;
+  --interactive-navigation-medium-text-transform: uppercase;
+  --interactive-navigation-medium-text-decoration: none;
+  --interactive-navigation-medium-default-size-line-height-number: 1.1;
+  --interactive-navigation-medium-default-size-line-height-px: 26.4px;
+  --interactive-navigation-medium-default-size-line-height-rem: 1.65rem;
+  --interactive-navigation-medium-default-size-font-size-rem: 1.5rem;
+  --interactive-navigation-medium-default-size-font-size-px: 24px;
+  --interactive-navigation-medium-default-size-font-size-pt: 18;
+  --interactive-navigation-small-font-family: "HM Slussen",
+    "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3", "Hiragino Kaku Gothic Pro", Osaka,
+    "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo, "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --interactive-navigation-small-font-weight: 400;
+  --interactive-navigation-small-font-variation-settings: "wght" 600, "wdth" 120,
+    "TITL" 0;
+  --interactive-navigation-small-text-transform: uppercase;
+  --interactive-navigation-small-text-decoration: none;
+  --interactive-navigation-small-default-size-line-height-number: 1.3;
+  --interactive-navigation-small-default-size-line-height-px: 15.6px;
+  --interactive-navigation-small-default-size-line-height-rem: 0.975rem;
+  --interactive-navigation-small-default-size-font-size-rem: 0.75rem;
+  --interactive-navigation-small-default-size-font-size-px: 12px;
+  --interactive-navigation-small-default-size-font-size-pt: 9;
+  --interactive-inline-link-default-font-family: "HM Slussen",
+    "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3", "Hiragino Kaku Gothic Pro", Osaka,
+    "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo, "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --interactive-inline-link-default-font-weight: 400;
+  --interactive-inline-link-default-font-variation-settings: "wght" 400,
+    "wdth" 100, "TITL" 0;
+  --interactive-inline-link-default-text-transform: none;
+  --interactive-inline-link-default-text-decoration: underline;
+  --interactive-inline-link-default-default-size-line-height-number: 1.3;
+  --interactive-inline-link-default-default-size-line-height-px: 16.9px;
+  --interactive-inline-link-default-default-size-line-height-rem: 1.0562rem;
+  --interactive-inline-link-default-default-size-font-size-rem: 0.8125rem;
+  --interactive-inline-link-default-default-size-font-size-px: 13px;
+  --interactive-inline-link-default-default-size-font-size-pt: 9.75;
+  --interactivve-inline-link-meta-font-family: "HM Slussen",
+    "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3", "Hiragino Kaku Gothic Pro", Osaka,
+    "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo, "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --interactive-inline-link-meta-font-weight: 400;
+  --interactive-inline-link-meta-font-variation-settings: "wght" 400, "wdth" 100,
+    "TITL" 0;
+  --interactive-inline-link-meta-text-transform: none;
+  --interactive-inline-link-meta-text-decoration: underline;
+  --interactive-inline-link-meta-default-size-line-height-number: 1.3;
+  --interactive-inline-link-meta-default-size-line-height-px: 14.3px;
+  --interactive-inline-link-meta-default-size-line-height-rem: 0.8938rem;
+  --interactive-inline-link-meta-default-size-font-size-rem: 0.6875rem;
+  --interactive-inline-link-meta-default-size-font-size-px: 11px;
+  --interactive-inline-link-meta-default-size-font-size-pt: 8.25;
+  --interactive-inline-link-paragraph-font-family: "HM Slussen",
+    "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3", "Hiragino Kaku Gothic Pro", Osaka,
+    "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo, "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --interactive-inline-link-paragraph-font-weight: 400;
+  --interactive-inline-link-paragraph-font-variation-settings: "wght" 400,
+    "wdth" 100, "TITL" 0;
+  --interactive-inline-link-paragraph-text-transform: none;
+  --interactive-inline-link-paragraph-text-decoration: underline;
+  --interactive-inline-link-paragraph-default-size-line-height-number: 1.5;
+  --interactive-inline-link-paragraph-default-size-line-height-px: 19.5px;
+  --interactive-inline-link-paragraph-default-size-line-height-rem: 1.2188rem;
+  --interactive-inline-link-paragraph-default-size-font-size-rem: 0.8125rem;
+  --interactive-inline-link-paragraph-default-size-font-size-px: 13px;
+  --interactive-inline-link-paragraph-default-size-font-size-pt: 9.75;
+  --interactive-inline-link-preamble-font-family: "HM Slussen",
+    "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3", "Hiragino Kaku Gothic Pro", Osaka,
+    "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo, "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --interactive-inline-link-preamble-font-weight: 400;
+  --interactive-inline-link-preamble-text-transform: none;
+  --interactive-inline-link-preamble-font-variation-settings: "wght" 400,
+    "wdth" 100, "TITL" 0;
+  --interactive-inline-link-preamble-text-decoration: underline;
+  --interactive-inline-link-preamble-default-size-line-height-number: 1.3;
+  --interactive-inline-link-preamble-default-size-line-height-px: 18.2px;
+  --interactive-inline-link-preamble-default-size-line-height-rem: 1.1375rem;
+  --interactive-inline-link-preamble-default-size-font-size-rem: 0.875rem;
+  --interactive-inline-link-preamble-default-size-font-size-px: 14px;
+  --interactive-inline-link-preamble-default-size-font-size-pt: 10.5;
+  --interactive-standalone-link-font-family: "HM Sergel", "Garamond",
+    "Times New Roman", Times, serif;
+  --interactive-standalone-link-font-weight: 400;
+  --interactive-standalone-link-text-transform: none;
+  --interactive-standalone-link-default-size-line-height-number: 1.125;
+  --interactive-standalone-link-default-size-line-height-px: 18px;
+  --interactive-standalone-link-default-size-line-height-rem: 1.125rem;
+  --interactive-standalone-link-default-size-font-size-rem: 1rem;
+  --interactive-standalone-link-default-size-font-size-px: 16px;
+  --interactive-standalone-link-default-size-font-size-pt: 12;
+  --interactive-standalone-link-default-font-family: "HM Slussen",
+    "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3", "Hiragino Kaku Gothic Pro", Osaka,
+    "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo, "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --interactive-standalone-link-default-font-weight: 400;
+  --interactive-standalone-link-default-text-transform: uppercase;
+  --interactive-standalone-link-default-font-variation-settings: "wght" 600,
+    "wdth" 120, "TITL" 0;
+  --interactive-standalone-link-default-text-decoration: none;
+  --interactive-standalone-link-default-letter-spacing: 0.12px;
+  --interactive-standalone-link-default-default-size-line-height-number: 1.3;
+  --interactive-standalone-link-default-default-size-line-height-px: 15.6px;
+  --interactive-standalone-link-default-default-size-line-height-rem: 0.975rem;
+  --interactive-standalone-link-default-default-size-font-size-rem: 0.75rem;
+  --interactive-standalone-link-default-default-size-font-size-px: 12px;
+  --interactive-standalone-link-default-default-size-font-size-pt: 9;
+  --interactive-sttandalone-link-underline-font-family: "HM Slussen",
+    "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3", "Hiragino Kaku Gothic Pro", Osaka,
+    "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo, "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --interactive-standalone-link-underline-font-weight: 400;
+  --interactive-standalone-link-underline-text-decoration: underline;
+  --interactive-standalone-link-underline-text-transform: uppercase;
+  --interactive-standalone-link-underline-font-variation-settings: "wght" 600,
+    "wdth" 120, "TITL" 0;
+  --interactive-standalone-link-underline-default-size-line-height-number: 1;
+  --interactive-standalone-link-underline-default-size-line-height-px: 12px;
+  --interactive-standalone-link-underline-default-size-line-height-rem: 0.75rem;
+  --interactive-standalone-link-underline-default-size-font-size-rem: 0.75rem;
+  --interactive-standalone-link-underline-default-size-font-size-px: 12px;
+  --interactive-standalone-link-underline-default-size-font-size-pt: 9;
+  --interactive-input-text-font-family: "HM Slussen",
+    "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3", "Hiragino Kaku Gothic Pro", Osaka,
+    "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo, "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --interactive-input-text-font-weight: 400;
+  --interactive-input-text-font-variation-settings: "wght" 400, "wdth" 100,
+    "TITL" 0;
+  --interactive-input-text-text-transform: none;
+  --interactive-input-text-default-size-line-height-number: 1;
+  --interactive-input-text-default-size-line-height-px: 16px;
+  --interactive-input-text-default-size-line-height-rem: 1rem;
+  --interactive-input-text-default-size-font-size-rem: 1rem;
+  --interactive-input-text-default-size-font-size-px: 16px;
+  --interactive-input-text-default-size-font-size-pt: 12;
+  --interactive-element-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --interactive-element-font-weight: 400;
+  --interactive-element-font-variation-settings: "wght" 600, "wdth" 120,
+    "TITL" 0;
+  --interactive-element-text-transform: uppercase;
+  --interactive-element-letter-spacing: 0.12px;
+  --interactive-element-default-size-line-height-number: 1.3;
+  --interactive-element-default-size-line-height-px: 15.6px;
+  --interactive-element-default-size-line-height-rem: 0.975rem;
+  --interactive-element-default-size-font-size-rem: 0.75rem;
+  --interactive-element-default-size-font-size-px: 12px;
+  --interactive-element-default-size-font-size-pt: 9;
+  --button-s-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --button-s-font-weight: 400;
+  --button-s-font-variation-settings: "wght" 600, "wdth" 120, "TITL" 0;
+  --button-s-text-transform: none;
+  --button-s-letter-spacing: normal;
+  --button-s-default-size-line-height-number: 1;
+  --button-s-default-size-line-height-px: 16px;
+  --button-s-default-size-line-height-rem: 1rem;
+  --button-s-default-size-font-size-rem: 1rem;
+  --button-s-default-size-font-size-px: 16px;
+  --button-s-default-size-font-size-pt: 12;
+  --spacing-none-px: 0px;
+  --spacing-none-rem: 0rem;
+  --spacing-xxxs-px: 2px;
+  --spacing-xxxs-rem: 0.125rem;
+  --spacing-xxs-px: 4px;
+  --spacing-xxs-rem: 0.25rem;
+  --spacing-xs-px: 8px;
+  --spacing-xs-rem: 0.5rem;
+  --spacing-s-px: 16px;
+  --spacing-s-rem: 1rem;
+  --spacing-m-px: 24px;
+  --spacing-m-rem: 1.5rem;
+  --spacing-l-px: 32px;
+  --spacing-l-rem: 2rem;
+  --spacing-xl-px: 40px;
+  --spacing-xl-rem: 2.5rem;
+  --spacing-xxl-px: 48px;
+  --spacing-xxl-rem: 3rem;
+  --spacing-xxl-2-px: 56px;
+  --spacing-xxl-2-rem: 3.5rem;
+  --spacing-xxxl-px: 64px;
+  --spacing-xxxl-rem: 4rem;
+  --spacing-xxxxl-px: 96px;
+  --spacing-xxxxl-rem: 6rem;
+  --spacing-xxxxxl-px: 128px;
+  --spacing-xxxxxl-rem: 7.5rem;
+  --spacing-xxxxxxl-px: 160px;
+  --spacing-xxxxxxl-rem: 10rem;
+  --spacing-xs-deprecated-px: 12px;
+  --spacing-xs-deprecated-rem: 0.75rem;
+  --fds-spacing-0-px: 0px;
+  --fds-spacing-0-rem: 0rem;
+  --fds-spacing-25-px: 2px;
+  --fds-spacing-25-rem: 0.125rem;
+  --fds-spacing-50-px: 4px;
+  --fds-spacing-50-rem: 0.25rem;
+  --fds-spacing-100-px: 8px;
+  --fds-spacing-100-rem: 0.5rem;
+  --fds-spacing-150-px: 12px;
+  --fds-spacing-150-rem: 0.75rem;
+  --fds-spacing-200-px: 16px;
+  --fds-spacing-200-rem: 1rem;
+  --fds-spacing-300-px: 24px;
+  --fds-spacing-300-rem: 1.5rem;
+  --fds-spacing-400-px: 32px;
+  --fds-spacing-400-rem: 2rem;
+  --fds-spacing-500-px: 40px;
+  --fds-spacing-500-rem: 2.5rem;
+  --fds-spacing-600-px: 48px;
+  --fds-spacing-600-rem: 3rem;
+  --fds-spacing-700-px: 56px;
+  --fds-spacing-700-rem: 3.5rem;
+  --fds-spacing-800-px: 64px;
+  --fds-spacing-800-rem: 4rem;
+  --fds-spacing-1200-px: 96px;
+  --fds-spacing-1200-rem: 6rem;
+  --fds-spacing-1600-px: 128px;
+  --fds-spacing-1600-rem: 7.5rem;
+  --fds-spacing-2000-px: 160px;
+  --fds-spacing-2000-rem: 10rem;
+  --z-index-toast-notification: 3200;
+  --z-index-panel: 3100;
+  --z-index-overlay: 3000;
+  --z-index-dropdown: 1000;
+  --z-index-tooltip: 1000;
+  --default-palette-background: #f8f7f6;
+  --default-palette-text: #000;
+  --default-palette-headline: #000;
+  --default-palette-logo: #e50010;
+  --default-palette-interactive: #000;
+  --default-palette-interactive-hover: #555555;
+  --default-palette-interactive-active: #757575;
+  --default-palette-interactive-reverse: #fff;
+  --inverted-palette-background: #000;
+  --inverted-palette-text: #fff;
+  --inverted-palette-headline: #fff;
+  --inverted-palette-logo: #fff;
+  --inverted-palette-interactive: #000;
+  --inverted-palette-interactive-hover: #555555;
+  --inverted-palette-interactive-active: #757575;
+  --inverted-palette-interactive-reverse: #fff;
+  --sale-palette-background: #f8f7f6;
+  --sale-palette-text: #e50010;
+  --sale-palette-headline: #e50010;
+  --sale-palette-logo: #e50010;
+  --sale-palette-interactive: #000;
+  --sale-palette-interactive-hover: #555555;
+  --sale-palette-interactive-active: #757575;
+  --sale-palette-interactive-reverse: #fff;
+  --member-palette-background: #f8f7f6;
+  --member-palette-text: #000;
+  --member-palette-headline: #000;
+  --member-palette-logo: #e50010;
+  --member-palette-interactive: #000;
+  --member-palette-interactive-hover: #555555;
+  --member-palette-interactive-active: #757575;
+  --member-palette-interactive-reverse: #fff;
+  --deals-palette-background: #f8f7f6;
+  --deals-palette-text: #000;
+  --deals-palette-headline: #000;
+  --deals-palette-logo: #e50010;
+  --deals-palette-interactive: #000;
+  --deals-palette-interactive-hover: #555555;
+  --deals-palette-interactive-active: #757575;
+  --deals-palette-interactive-reverse: #fff;
+  --black-friday-palette-background: #000;
+  --black-friday-palette-text: #fff;
+  --black-friday-palette-headline: #eb0010;
+  --black-friday-palette-logo: #eb0010;
+  --black-friday-palette-interactive: #eb0010;
+  --black-friday-palette-interactive-hover: #e65a64;
+  --black-friday-palette-interactive-active: #eb0010;
+  --black-friday-palette-interactive-reverse: #fff;
+  --cyber-monday-palette-background: #f0f0eb;
+  --cyber-monday-palette-text: #000;
+  --cyber-monday-palette-headline: #374894;
+  --cyber-monday-palette-logo: #374894;
+  --cyber-monday-palette-interactive: #374894;
+  --cyber-monday-palette-interactive-hover: #5c6693;
+  --cyber-monday-palette-interactive-active: #374894;
+  --cyber-monday-palette-interactive-reverse: #fff;
+  --fds-text-display-xl-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-display-xl-text-transform: uppercase;
+  --fds-text-display-xl-font-variation-settings: "wdth" 140, "wght" 700,
+    "TITL" 1;
+  --fds-text-display-xl-font-weight: 100;
+  --fds-text-display-xl-default-size-font-size-rem: 2.75rem;
+  --fds-text-display-xl-default-size-font-size-px: 44px;
+  --fds-text-display-xl-default-size-font-size-pt: 33;
+  --fds-text-display-xl-default-size-line-height-px: 52px;
+  --fds-text-display-xl-default-size-line-height-rem: 3.25rem;
+  --fds-text-display-xl-default-size-line-height-number: 1.1818181818181819;
+  --fds-text-display-xl-size-desktop-font-size-rem: 5.5rem;
+  --fds-text-display-xl-size-desktop-font-size-px: 88px;
+  --fds-text-display-xl-size-desktop-font-size-pt: 66;
+  --fds-text-display-xl-size-desktop-line-height-px: 105px;
+  --fds-text-display-xl-size-desktop-line-height-rem: 6.563rem;
+  --fds-text-display-xl-size-desktop-line-height-number: 1.1931818181818181;
+  --fds-text-display-l-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-display-l-text-transform: uppercase;
+  --fds-text-display-l-font-variation-settings: "wdth" 140, "wght" 700, "TITL" 1;
+  --fds-text-display-l-font-weight: 100;
+  --fds-text-display-l-default-size-font-size-rem: 2.25rem;
+  --fds-text-display-l-default-size-font-size-px: 36px;
+  --fds-text-display-l-default-size-font-size-pt: 27;
+  --fds-text-display-l-default-size-line-height-px: 43px;
+  --fds-text-display-l-default-size-line-height-rem: 2.688rem;
+  --fds-text-display-l-default-size-line-height-number: 1.1944444444444444;
+  --fds-text-display-m-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-display-m-text-transform: uppercase;
+  --fds-text-display-m-font-variation-settings: "wdth" 140, "wght" 700, "TITL" 1;
+  --fds-text-display-m-font-weight: 100;
+  --fds-text-display-m-default-size-font-size-rem: 1.5rem;
+  --fds-text-display-m-default-size-font-size-px: 24px;
+  --fds-text-display-m-default-size-font-size-pt: 18;
+  --fds-text-display-m-default-size-line-height-px: 29px;
+  --fds-text-display-m-default-size-line-height-rem: 1.813rem;
+  --fds-text-display-m-default-size-line-height-number: 1.2083333333333333;
+  --fds-text-display-m-size-desktop-font-size-rem: 2rem;
+  --fds-text-display-m-size-desktop-font-size-px: 32px;
+  --fds-text-display-m-size-desktop-font-size-pt: 24;
+  --fds-text-display-m-size-desktop-line-height-px: 38px;
+  --fds-text-display-m-size-desktop-line-height-rem: 2.375rem;
+  --fds-text-display-m-size-desktop-line-height-number: 1.1875;
+  --fds-text-heading-xxl-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-heading-xxl-text-transform: uppercase;
+  --fds-text-heading-xxl-font-variation-settings: "wdth" 140, "wght" 700,
+    "TITL" 1;
+  --fds-text-heading-xxl-font-weight: 100;
+  --fds-text-heading-xxl-default-size-font-size-rem: 2rem;
+  --fds-text-heading-xxl-default-size-font-size-px: 32px;
+  --fds-text-heading-xxl-default-size-font-size-pt: 24;
+  --fds-text-heading-xxl-default-size-line-height-px: 38px;
+  --fds-text-heading-xxl-default-size-line-height-rem: 2.375rem;
+  --fds-text-heading-xxl-default-size-line-height-number: 1.1875;
+  --fds-text-heading-xxl-size-desktop-font-size-rem: 2.75rem;
+  --fds-text-heading-xxl-size-desktop-font-size-px: 44px;
+  --fds-text-heading-xxl-size-desktop-font-size-pt: 33;
+  --fds-text-heading-xxl-size-desktop-line-height-px: 52px;
+  --fds-text-heading-xxl-size-desktop-line-height-rem: 3.25rem;
+  --fds-text-heading-xxl-size-desktop-line-height-number: 1.1818181818181819;
+  --fds-text-heading-xl-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-heading-xl-text-transform: uppercase;
+  --fds-text-heading-xl-font-variation-settings: "wdth" 100, "wght" 600,
+    "TITL" 0;
+  --fds-text-heading-xl-font-weight: 100;
+  --fds-text-heading-xl-default-size-font-size-rem: 1rem;
+  --fds-text-heading-xl-default-size-font-size-px: 16px;
+  --fds-text-heading-xl-default-size-font-size-pt: 12;
+  --fds-text-heading-xl-default-size-line-height-px: 20px;
+  --fds-text-heading-xl-default-size-line-height-rem: 1.25rem;
+  --fds-text-heading-xl-default-size-line-height-number: 1.25;
+  --fds-text-heading-l-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-heading-l-text-transform: uppercase;
+  --fds-text-heading-l-font-variation-settings: "wdth" 100, "wght" 400, "TITL" 0;
+  --fds-text-heading-l-font-weight: 100;
+  --fds-text-heading-l-default-size-font-size-rem: 1rem;
+  --fds-text-heading-l-default-size-font-size-px: 16px;
+  --fds-text-heading-l-default-size-font-size-pt: 12;
+  --fds-text-heading-l-default-size-line-height-px: 20px;
+  --fds-text-heading-l-default-size-line-height-rem: 1.25rem;
+  --fds-text-heading-l-default-size-line-height-number: 1.25;
+  --fds-text-heading-m-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-heading-m-text-transform: uppercase;
+  --fds-text-heading-m-font-variation-settings: "wdth" 100, "wght" 400, "TITL" 0;
+  --fds-text-heading-m-font-weight: 100;
+  --fds-text-heading-m-default-size-font-size-rem: 0.875rem;
+  --fds-text-heading-m-default-size-font-size-px: 14px;
+  --fds-text-heading-m-default-size-font-size-pt: 10.5;
+  --fds-text-heading-m-default-size-line-height-px: 17px;
+  --fds-text-heading-m-default-size-line-height-rem: 1.063rem;
+  --fds-text-heading-m-default-size-line-height-number: 1.2142857142857142;
+  --fds-text-heading-s-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-heading-s-text-transform: none;
+  --fds-text-heading-s-font-variation-settings: "wdth" 100, "wght" 600, "TITL" 0;
+  --fds-text-heading-s-font-weight: 100;
+  --fds-text-heading-s-default-size-font-size-rem: 0.875rem;
+  --fds-text-heading-s-default-size-font-size-px: 14px;
+  --fds-text-heading-s-default-size-font-size-pt: 10.5;
+  --fds-text-heading-s-default-size-line-height-px: 17px;
+  --fds-text-heading-s-default-size-line-height-rem: 1.063rem;
+  --fds-text-heading-s-default-size-line-height-number: 1.2142857142857142;
+  --fds-text-label-xs-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-label-xs-text-transform: uppercase;
+  --fds-text-label-xs-font-variation-settings: "wdth" 100, "wght" 400, "TITL" 0;
+  --fds-text-label-xs-font-weight: 100;
+  --fds-text-label-xs-default-size-font-size-rem: 0.75rem;
+  --fds-text-label-xs-default-size-font-size-px: 12px;
+  --fds-text-label-xs-default-size-font-size-pt: 9;
+  --fds-text-label-xs-default-size-line-height-px: 14.279999732971191px;
+  --fds-text-label-xs-default-size-line-height-rem: 0.89249998325rem;
+  --fds-text-label-xs-default-size-line-height-number: 1.1899999777475994;
+  --fds-text-label-s-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-label-s-text-transform: none;
+  --fds-text-label-s-font-variation-settings: "wdth" 100, "wght" 400, "TITL" 0;
+  --fds-text-label-s-font-weight: 100;
+  --fds-text-label-s-default-size-font-size-rem: 0.75rem;
+  --fds-text-label-s-default-size-font-size-px: 12px;
+  --fds-text-label-s-default-size-font-size-pt: 9;
+  --fds-text-label-s-default-size-line-height-px: 16px;
+  --fds-text-label-s-default-size-line-height-rem: 1rem;
+  --fds-text-label-s-default-size-line-height-number: 1.3333333333333333;
+  --fds-text-label-s-strong-font-family: "HM Slussen",
+    "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3", "Hiragino Kaku Gothic Pro", Osaka,
+    "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo, "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-label-s-strong-text-transform: none;
+  --fds-text-label-s-strong-font-variation-settings: "wdth" 100, "wght" 600,
+    "TITL" 0;
+  --fds-text-label-s-strong-font-weight: 100;
+  --fds-text-label-s-strong-default-size-font-size-rem: 0.75rem;
+  --fds-text-label-s-strong-default-size-font-size-px: 12px;
+  --fds-text-label-s-strong-default-size-font-size-pt: 9;
+  --fds-text-label-s-strong-default-size-line-height-px: 16px;
+  --fds-text-label-s-strong-default-size-line-height-rem: 1rem;
+  --fds-text-label-s-strong-default-size-line-height-number: 1.3333333333333333;
+  --fds-text-label-s-link-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-label-s-link-text-transform: none;
+  --fds-text-label-s-link-font-variation-settings: "wdth" 100, "wght" 400,
+    "TITL" 0;
+  --fds-text-label-s-link-font-weight: 100;
+  --fds-text-label-s-link-text-decoration: underline;
+  --fds-text-label-s-link-default-size-font-size-rem: 0.75rem;
+  --fds-text-label-s-link-default-size-font-size-px: 12px;
+  --fds-text-label-s-link-default-size-font-size-pt: 9;
+  --fds-text-label-s-link-default-size-line-height-px: 16px;
+  --fds-text-label-s-link-default-size-line-height-rem: 1rem;
+  --fds-text-label-s-link-default-size-line-height-number: 1.3333333333333333;
+  --fds-text-label-m-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-label-m-text-transform: none;
+  --fds-text-label-m-font-variation-settings: "wdth" 100, "wght" 400, "TITL" 0;
+  --fds-text-label-m-font-weight: 100;
+  --fds-text-label-m-default-size-font-size-rem: 0.875rem;
+  --fds-text-label-m-default-size-font-size-px: 14px;
+  --fds-text-label-m-default-size-font-size-pt: 10.5;
+  --fds-text-label-m-default-size-line-height-px: 17px;
+  --fds-text-label-m-default-size-line-height-rem: 1.063rem;
+  --fds-text-label-m-default-size-line-height-number: 1.2142857142857142;
+  --fds-text-label-m-strong-font-family: "HM Slussen",
+    "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3", "Hiragino Kaku Gothic Pro", Osaka,
+    "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo, "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-label-m-strong-text-transform: none;
+  --fds-text-label-m-strong-font-variation-settings: "wdth" 100, "wght" 600,
+    "TITL" 0;
+  --fds-text-label-m-strong-font-weight: 100;
+  --fds-text-label-m-strong-default-size-font-size-rem: 0.875rem;
+  --fds-text-label-m-strong-default-size-font-size-px: 14px;
+  --fds-text-label-m-strong-default-size-font-size-pt: 10.5;
+  --fds-text-label-m-strong-default-size-line-height-px: 17px;
+  --fds-text-label-m-strong-default-size-line-height-rem: 1.063rem;
+  --fds-text-label-m-strong-default-size-line-height-number: 1.2142857142857142;
+  --fds-text-label-m-link-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-label-m-link-text-transform: none;
+  --fds-text-label-m-link-font-variation-settings: "wdth" 100, "wght" 400,
+    "TITL" 0;
+  --fds-text-label-m-link-font-weight: 100;
+  --fds-text-label-m-link-text-decoration: underline;
+  --fds-text-label-m-link-default-size-font-size-rem: 0.875rem;
+  --fds-text-label-m-link-default-size-font-size-px: 14px;
+  --fds-text-label-m-link-default-size-font-size-pt: 10.5;
+  --fds-text-label-m-link-default-size-line-height-px: 17px;
+  --fds-text-label-m-link-default-size-line-height-rem: 1.063rem;
+  --fds-text-label-m-link-default-size-line-height-number: 1.2142857142857142;
+  --fds-text-label-l-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-label-l-text-transform: none;
+  --fds-text-label-l-font-variation-settings: "wdth" 100, "wght" 400, "TITL" 0;
+  --fds-text-label-l-font-weight: 100;
+  --fds-text-label-l-default-size-font-size-rem: 1rem;
+  --fds-text-label-l-default-size-font-size-px: 16px;
+  --fds-text-label-l-default-size-font-size-pt: 12;
+  --fds-text-label-l-default-size-line-height-px: 20px;
+  --fds-text-label-l-default-size-line-height-rem: 1.25rem;
+  --fds-text-label-l-default-size-line-height-number: 1.25;
+  --fds-text-label-l-link-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-label-l-link-text-transform: none;
+  --fds-text-label-l-link-font-variation-settings: "wdth" 100, "wght" 400,
+    "TITL" 0;
+  --fds-text-label-l-link-font-weight: 100;
+  --fds-text-label-l-link-text-decoration: underline;
+  --fds-text-label-l-link-default-size-font-size-rem: 1rem;
+  --fds-text-label-l-link-default-size-font-size-px: 16px;
+  --fds-text-label-l-link-default-size-font-size-pt: 12;
+  --fds-text-label-l-link-default-size-line-height-px: 20px;
+  --fds-text-label-l-link-default-size-line-height-rem: 1.25rem;
+  --fds-text-label-l-link-default-size-line-height-number: 1.25;
+  --fds-text-body-s-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-body-s-text-transform: none;
+  --fds-text-body-s-font-variation-settings: "wdth" 100, "wght" 400, "TITL" 0;
+  --fds-text-body-s-font-weight: 100;
+  --fds-text-body-s-default-size-font-size-rem: 0.75rem;
+  --fds-text-body-s-default-size-font-size-px: 12px;
+  --fds-text-body-s-default-size-font-size-pt: 9;
+  --fds-text-body-s-default-size-line-height-px: 16px;
+  --fds-text-body-s-default-size-line-height-rem: 1rem;
+  --fds-text-body-s-default-size-line-height-number: 1.3333333333333333;
+  --fds-text-body-s-link-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-body-s-link-text-transform: none;
+  --fds-text-body-s-link-font-variation-settings: "wdth" 100, "wght" 400,
+    "TITL" 0;
+  --fds-text-body-s-link-font-weight: 100;
+  --fds-text-body-s-link-text-decoration: underline;
+  --fds-text-body-s-link-default-size-font-size-rem: 0.75rem;
+  --fds-text-body-s-link-default-size-font-size-px: 12px;
+  --fds-text-body-s-link-default-size-font-size-pt: 9;
+  --fds-text-body-s-link-default-size-line-height-px: 16px;
+  --fds-text-body-s-link-default-size-line-height-rem: 1rem;
+  --fds-text-body-s-link-default-size-line-height-number: 1.3333333333333333;
+  --fds-text-body-m-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-body-m-text-transform: none;
+  --fds-text-body-m-font-variation-settings: "wdth" 100, "wght" 400, "TITL" 0;
+  --fds-text-body-m-font-weight: 100;
+  --fds-text-body-m-default-size-font-size-rem: 0.875rem;
+  --fds-text-body-m-default-size-font-size-px: 14px;
+  --fds-text-body-m-default-size-font-size-pt: 10.5;
+  --fds-text-body-m-default-size-line-height-px: 20px;
+  --fds-text-body-m-default-size-line-height-rem: 1.25rem;
+  --fds-text-body-m-default-size-line-height-number: 1.4285714285714286;
+  --fds-text-body-m-link-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-body-m-link-text-transform: none;
+  --fds-text-body-m-link-font-variation-settings: "wdth" 100, "wght" 400,
+    "TITL" 0;
+  --fds-text-body-m-link-font-weight: 100;
+  --fds-text-body-m-link-text-decoration: underline;
+  --fds-text-body-m-link-default-size-font-size-rem: 0.875rem;
+  --fds-text-body-m-link-default-size-font-size-px: 14px;
+  --fds-text-body-m-link-default-size-font-size-pt: 10.5;
+  --fds-text-body-m-link-default-size-line-height-px: 20px;
+  --fds-text-body-m-link-default-size-line-height-rem: 1.25rem;
+  --fds-text-body-m-link-default-size-line-height-number: 1.4285714285714286;
+  --fds-text-nav-s-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-nav-s-text-transform: uppercase;
+  --fds-text-nav-s-font-variation-settings: "wdth" 100, "wght" 400, "TITL" 0;
+  --fds-text-nav-s-font-weight: 100;
+  --fds-text-nav-s-text-decoration: none;
+  --fds-text-nav-s-default-size-font-size-rem: 0.875rem;
+  --fds-text-nav-s-default-size-font-size-px: 14px;
+  --fds-text-nav-s-default-size-font-size-pt: 10.5;
+  --fds-text-nav-s-default-size-line-height-px: 17px;
+  --fds-text-nav-s-default-size-line-height-rem: 1.063rem;
+  --fds-text-nav-s-default-size-line-height-number: 1.2142857142857142;
+  --fds-text-nav-s-active-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-nav-s-active-text-transform: uppercase;
+  --fds-text-nav-s-active-font-variation-settings: "wdth" 100, "wght" 600,
+    "TITL" 0;
+  --fds-text-nav-s-active-font-weight: 100;
+  --fds-text-nav-s-active-text-decoration: none;
+  --fds-text-nav-s-active-default-size-font-size-rem: 0.875rem;
+  --fds-text-nav-s-active-default-size-font-size-px: 14px;
+  --fds-text-nav-s-active-default-size-font-size-pt: 10.5;
+  --fds-text-nav-s-active-default-size-line-height-px: 17px;
+  --fds-text-nav-s-active-default-size-line-height-rem: 1.063rem;
+  --fds-text-nav-s-active-default-size-line-height-number: 1.2142857142857142;
+  --fds-text-nav-m-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-nav-m-text-transform: uppercase;
+  --fds-text-nav-m-font-variation-settings: "wdth" 100, "wght" 400, "TITL" 0;
+  --fds-text-nav-m-font-weight: 100;
+  --fds-text-nav-m-text-decoration: none;
+  --fds-text-nav-m-default-size-font-size-rem: 1.25rem;
+  --fds-text-nav-m-default-size-font-size-px: 20px;
+  --fds-text-nav-m-default-size-font-size-pt: 15;
+  --fds-text-nav-m-default-size-line-height-px: 24px;
+  --fds-text-nav-m-default-size-line-height-rem: 1.5rem;
+  --fds-text-nav-m-default-size-line-height-number: 1.2;
+  --fds-text-nav-m-active-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-nav-m-active-text-transform: uppercase;
+  --fds-text-nav-m-active-font-variation-settings: "wdth" 100, "wght" 600,
+    "TITL" 0;
+  --fds-text-nav-m-active-font-weight: 100;
+  --fds-text-nav-m-active-text-decoration: none;
+  --fds-text-nav-m-active-default-size-font-size-rem: 1.25rem;
+  --fds-text-nav-m-active-default-size-font-size-px: 20px;
+  --fds-text-nav-m-active-default-size-font-size-pt: 15;
+  --fds-text-nav-m-active-default-size-line-height-px: 24px;
+  --fds-text-nav-m-active-default-size-line-height-rem: 1.5rem;
+  --fds-text-nav-m-active-default-size-line-height-number: 1.2;
+  --fds-text-nav-l-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-nav-l-text-transform: uppercase;
+  --fds-text-nav-l-font-variation-settings: "wdth" 140, "wght" 700, "TITL" 1;
+  --fds-text-nav-l-font-weight: 100;
+  --fds-text-nav-l-text-decoration: none;
+  --fds-text-nav-l-default-size-font-size-rem: 2.375rem;
+  --fds-text-nav-l-default-size-font-size-px: 38px;
+  --fds-text-nav-l-default-size-font-size-pt: 28.5;
+  --fds-text-nav-l-default-size-line-height-px: 45px;
+  --fds-text-nav-l-default-size-line-height-rem: 2.813rem;
+  --fds-text-nav-l-default-size-line-height-number: 1.1842105263157894;
+  --fds-text-nav-l-size-desktop-font-size-rem: 2.375rem;
+  --fds-text-nav-l-size-desktop-font-size-px: 38px;
+  --fds-text-nav-l-size-desktop-font-size-pt: 28.5;
+  --fds-text-nav-l-size-desktop-line-height-px: 45px;
+  --fds-text-nav-l-size-desktop-line-height-rem: 2.813rem;
+  --fds-text-nav-l-size-desktop-line-height-number: 1.1842105263157894;
+  --fds-text-nav-xl-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-nav-xl-text-transform: uppercase;
+  --fds-text-nav-xl-font-variation-settings: "wdth" 140, "wght" 700, "TITL" 1;
+  --fds-text-nav-xl-font-weight: 100;
+  --fds-text-nav-xl-text-decoration: none;
+  --fds-text-nav-xl-default-size-font-size-rem: 2.375rem;
+  --fds-text-nav-xl-default-size-font-size-px: 38px;
+  --fds-text-nav-xl-default-size-font-size-pt: 28.5;
+  --fds-text-nav-xl-default-size-line-height-px: 45.220001220703125px;
+  --fds-text-nav-xl-default-size-line-height-rem: 2.82625rem;
+  --fds-text-nav-xl-default-size-line-height-number: 1.1900000321237665;
+  --fds-text-nav-xl-size-desktop-font-size-rem: 2.375rem;
+  --fds-text-nav-xl-size-desktop-font-size-px: 38px;
+  --fds-text-nav-xl-size-desktop-font-size-pt: 28.5;
+  --fds-text-nav-xl-size-desktop-line-height-px: 52px;
+  --fds-text-nav-xl-size-desktop-line-height-rem: 3.25rem;
+  --fds-text-nav-xl-size-desktop-line-height-number: 1.368421052631579;
+  --fds-text-action-s-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-action-s-text-transform: uppercase;
+  --fds-text-action-s-font-variation-settings: "wdth" 100, "wght" 400, "TITL" 0;
+  --fds-text-action-s-font-weight: 100;
+  --fds-text-action-s-text-decoration: underline;
+  --fds-text-action-s-default-size-font-size-rem: 0.875rem;
+  --fds-text-action-s-default-size-font-size-px: 14px;
+  --fds-text-action-s-default-size-font-size-pt: 10.5;
+  --fds-text-action-s-default-size-line-height-px: 16px;
+  --fds-text-action-s-default-size-line-height-rem: 1rem;
+  --fds-text-action-s-default-size-line-height-number: 1.1428571428571428;
+  --fds-text-action-m-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-action-m-text-transform: uppercase;
+  --fds-text-action-m-font-variation-settings: "wdth" 100, "wght" 400, "TITL" 0;
+  --fds-text-action-m-font-weight: 100;
+  --fds-text-action-m-default-size-font-size-rem: 0.875rem;
+  --fds-text-action-m-default-size-font-size-px: 14px;
+  --fds-text-action-m-default-size-font-size-pt: 10.5;
+  --fds-text-action-m-default-size-line-height-px: 16px;
+  --fds-text-action-m-default-size-line-height-rem: 1rem;
+  --fds-text-action-m-default-size-line-height-number: 1.1428571428571428;
+  --fds-text-action-m-active-font-family: "HM Slussen",
+    "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3", "Hiragino Kaku Gothic Pro", Osaka,
+    "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo, "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-action-m-active-text-transform: uppercase;
+  --fds-text-action-m-active-font-variation-settings: "wdth" 100, "wght" 600,
+    "TITL" 0;
+  --fds-text-action-m-active-font-weight: 100;
+  --fds-text-action-m-active-default-size-font-size-rem: 0.875rem;
+  --fds-text-action-m-active-default-size-font-size-px: 14px;
+  --fds-text-action-m-active-default-size-font-size-pt: 10.5;
+  --fds-text-action-m-active-default-size-line-height-px: 16px;
+  --fds-text-action-m-active-default-size-line-height-rem: 1rem;
+  --fds-text-action-m-active-default-size-line-height-number: 1.1428571428571428;
+  --fds-text-link-s-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-link-s-text-transform: uppercase;
+  --fds-text-link-s-font-variation-settings: "wdth" 100, "wght" 400, "TITL" 0;
+  --fds-text-link-s-font-weight: 100;
+  --fds-text-link-s-text-decoration: underline;
+  --fds-text-link-s-default-size-font-size-rem: 0.875rem;
+  --fds-text-link-s-default-size-font-size-px: 14px;
+  --fds-text-link-s-default-size-font-size-pt: 10.5;
+  --fds-text-link-s-default-size-line-height-px: 20px;
+  --fds-text-link-s-default-size-line-height-rem: 1.25rem;
+  --fds-text-link-s-default-size-line-height-number: 1.4285714285714286;
+  --fds-text-link-m-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-link-m-text-transform: uppercase;
+  --fds-text-link-m-font-variation-settings: "wdth" 100, "wght" 400, "TITL" 0;
+  --fds-text-link-m-font-weight: 100;
+  --fds-text-link-m-text-decoration: none;
+  --fds-text-link-m-default-size-font-size-rem: 0.875rem;
+  --fds-text-link-m-default-size-font-size-px: 14px;
+  --fds-text-link-m-default-size-font-size-pt: 10.5;
+  --fds-text-link-m-default-size-line-height-px: 20px;
+  --fds-text-link-m-default-size-line-height-rem: 1.25rem;
+  --fds-text-link-m-default-size-line-height-number: 1.4285714285714286;
+  --fds-text-price-s-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-price-s-text-transform: none;
+  --fds-text-price-s-font-variation-settings: "wdth" 100, "wght" 600, "TITL" 0;
+  --fds-text-price-s-font-weight: 100;
+  --fds-text-price-s-default-size-font-size-rem: 0.75rem;
+  --fds-text-price-s-default-size-font-size-px: 12px;
+  --fds-text-price-s-default-size-font-size-pt: 9;
+  --fds-text-price-s-default-size-line-height-px: 16px;
+  --fds-text-price-s-default-size-line-height-rem: 1rem;
+  --fds-text-price-s-default-size-line-height-number: 1.3333333333333333;
+  --fds-text-price-m-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-price-m-text-transform: none;
+  --fds-text-price-m-font-variation-settings: "wdth" 100, "wght" 600, "TITL" 0;
+  --fds-text-price-m-font-weight: 100;
+  --fds-text-price-m-default-size-font-size-rem: 0.875rem;
+  --fds-text-price-m-default-size-font-size-px: 14px;
+  --fds-text-price-m-default-size-font-size-pt: 10.5;
+  --fds-text-price-m-default-size-line-height-px: 17px;
+  --fds-text-price-m-default-size-line-height-rem: 1.063rem;
+  --fds-text-price-m-default-size-line-height-number: 1.2142857142857142;
+  --fds-text-price-l-font-family: "HM Slussen", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3",
+    "Hiragino Kaku Gothic Pro", Osaka, "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-price-l-text-transform: none;
+  --fds-text-price-l-font-variation-settings: "wdth" 100, "wght" 600, "TITL" 0;
+  --fds-text-price-l-font-weight: 100;
+  --fds-text-price-l-default-size-font-size-rem: 1rem;
+  --fds-text-price-l-default-size-font-size-px: 16px;
+  --fds-text-price-l-default-size-font-size-pt: 12;
+  --fds-text-price-l-default-size-line-height-px: 20px;
+  --fds-text-price-l-default-size-line-height-rem: 1.25rem;
+  --fds-text-price-l-default-size-line-height-number: 1.25;
+  --fds-text-price-s-previous-font-family: "HM Slussen",
+    "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3", "Hiragino Kaku Gothic Pro", Osaka,
+    "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo, "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-price-s-previous-text-transform: none;
+  --fds-text-price-s-previous-text-decoration: line-through;
+  --fds-text-price-s-previous-font-variation-settings: "wdth" 100, "wght" 400,
+    "TITL" 0;
+  --fds-text-price-s-previous-font-weight: 100;
+  --fds-text-price-s-previous-default-size-font-size-rem: 0.75rem;
+  --fds-text-price-s-previous-default-size-font-size-px: 12px;
+  --fds-text-price-s-previous-default-size-font-size-pt: 9;
+  --fds-text-price-s-previous-default-size-line-height-px: 16px;
+  --fds-text-price-s-previous-default-size-line-height-rem: 1rem;
+  --fds-text-price-s-previous-default-size-line-height-number: 1.3333333333333333;
+  --fds-text-price-m-previous-font-family: "HM Slussen",
+    "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3", "Hiragino Kaku Gothic Pro", Osaka,
+    "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo, "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-price-m-previous-text-transform: none;
+  --fds-text-price-m-previous-text-decoration: line-through;
+  --fds-text-price-m-previous-font-variation-settings: "wdth" 100, "wght" 400,
+    "TITL" 0;
+  --fds-text-price-m-previous-font-weight: 100;
+  --fds-text-price-m-previous-default-size-font-size-rem: 0.875rem;
+  --fds-text-price-m-previous-default-size-font-size-px: 14px;
+  --fds-text-price-m-previous-default-size-font-size-pt: 10.5;
+  --fds-text-price-m-previous-default-size-line-height-px: 17px;
+  --fds-text-price-m-previous-default-size-line-height-rem: 1.063rem;
+  --fds-text-price-m-previous-default-size-line-height-number: 1.2142857142857142;
+  --fds-text-price-l-previous-font-family: "HM Slussen",
+    "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3", "Hiragino Kaku Gothic Pro", Osaka,
+    "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo, "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-price-l-previous-text-transform: none;
+  --fds-text-price-l-previous-text-decoration: line-through;
+  --fds-text-price-l-previous-font-variation-settings: "wdth" 100, "wght" 400,
+    "TITL" 0;
+  --fds-text-price-l-previous-font-weight: 100;
+  --fds-text-price-l-previous-default-size-font-size-rem: 1rem;
+  --fds-text-price-l-previous-default-size-font-size-px: 16px;
+  --fds-text-price-l-previous-default-size-font-size-pt: 12;
+  --fds-text-price-l-previous-default-size-line-height-px: 20px;
+  --fds-text-price-l-previous-default-size-line-height-rem: 1.25rem;
+  --fds-text-price-l-previous-default-size-line-height-number: 1.25;
+  --fds-text-editorial-heading-xl-font-family: "HM Sergel Headline", "Garamond",
+    "Times New Roman", Times, serif;
+  --fds-text-editorial-heading-xl-text-transform: none;
+  --fds-text-editorial-heading-xl-font-weight: 400;
+  --fds-text-editorial-heading-xl-default-size-font-size-rem: 3rem;
+  --fds-text-editorial-heading-xl-default-size-font-size-px: 48px;
+  --fds-text-editorial-heading-xl-default-size-font-size-pt: 36;
+  --fds-text-editorial-heading-xl-default-size-line-height-px: 64px;
+  --fds-text-editorial-heading-xl-default-size-line-height-rem: 4rem;
+  --fds-text-editorial-heading-xl-default-size-line-height-number: 1.3333333333333333;
+  --fds-text-editorial-heading-xl-size-desktop-font-size-rem: 4rem;
+  --fds-text-editorial-heading-xl-size-desktop-font-size-px: 64px;
+  --fds-text-editorial-heading-xl-size-desktop-font-size-pt: 48;
+  --fds-text-editorial-heading-xl-size-desktop-line-height-px: 80px;
+  --fds-text-editorial-heading-xl-size-desktop-line-height-rem: 5rem;
+  --fds-text-editorial-heading-xl-size-desktop-line-height-number: 1.25;
+  --fds-text-editorial-heading-xxl-font-family: "HM Sergel Headline", "Garamond",
+    "Times New Roman", Times, serif;
+  --fds-text-editorial-heading-xxl-text-transform: none;
+  --fds-text-editorial-heading-xxl-font-weight: 400;
+  --fds-text-editorial-heading-xxl-default-size-font-size-rem: 3rem;
+  --fds-text-editorial-heading-xxl-default-size-font-size-px: 48px;
+  --fds-text-editorial-heading-xxl-default-size-font-size-pt: 36;
+  --fds-text-editorial-heading-xxl-default-size-line-height-px: 64px;
+  --fds-text-editorial-heading-xxl-default-size-line-height-rem: 4rem;
+  --fds-text-editorial-heading-xxl-default-size-line-height-number: 1.3333333333333333;
+  --fds-text-editorial-heading-xxl-size-desktop-font-size-rem: 6rem;
+  --fds-text-editorial-heading-xxl-size-desktop-font-size-px: 96px;
+  --fds-text-editorial-heading-xxl-size-desktop-font-size-pt: 72;
+  --fds-text-editorial-heading-xxl-size-desktop-line-height-px: 122px;
+  --fds-text-editorial-heading-xxl-size-desktop-line-height-rem: 7.625rem;
+  --fds-text-editorial-heading-xxl-size-desktop-line-height-number: 1.2708333333333333;
+  --fds-text-editorial-quote-l-font-family: "HM Sergel Headline", "Garamond",
+    "Times New Roman", Times, serif;
+  --fds-text-editorial-quote-l-text-transform: none;
+  --fds-text-editorial-quote-l-font-weight: 400;
+  --fds-text-editorial-quote-l-font-style: italic;
+  --fds-text-editorial-quote-l-default-size-font-size-rem: 2rem;
+  --fds-text-editorial-quote-l-default-size-font-size-px: 32px;
+  --fds-text-editorial-quote-l-default-size-font-size-pt: 24;
+  --fds-text-editorial-quote-l-default-size-line-height-px: 42px;
+  --fds-text-editorial-quote-l-default-size-line-height-rem: 2.625rem;
+  --fds-text-editorial-quote-l-default-size-line-height-number: 1.3125;
+  --fds-text-editorial-quote-l-size-desktop-font-size-rem: 4rem;
+  --fds-text-editorial-quote-l-size-desktop-font-size-px: 64px;
+  --fds-text-editorial-quote-l-size-desktop-font-size-pt: 48;
+  --fds-text-editorial-quote-l-size-desktop-line-height-px: 80px;
+  --fds-text-editorial-quote-l-size-desktop-line-height-rem: 5rem;
+  --fds-text-editorial-quote-l-size-desktop-line-height-number: 1.25;
+  --fds-text-editorial-body-xl-font-family: "HM Sergel Headline", "Garamond",
+    "Times New Roman", Times, serif;
+  --fds-text-editorial-body-xl-text-transform: none;
+  --fds-text-editorial-body-xl-font-weight: 400;
+  --fds-text-editorial-body-xl-default-size-font-size-rem: 2rem;
+  --fds-text-editorial-body-xl-default-size-font-size-px: 32px;
+  --fds-text-editorial-body-xl-default-size-font-size-pt: 24;
+  --fds-text-editorial-body-xl-default-size-line-height-px: 42px;
+  --fds-text-editorial-body-xl-default-size-line-height-rem: 2.625rem;
+  --fds-text-editorial-body-xl-default-size-line-height-number: 1.3125;
+  --fds-text-editorial-body-xl-size-desktop-font-size-rem: 4rem;
+  --fds-text-editorial-body-xl-size-desktop-font-size-px: 64px;
+  --fds-text-editorial-body-xl-size-desktop-font-size-pt: 48;
+  --fds-text-editorial-body-xl-size-desktop-line-height-px: 80px;
+  --fds-text-editorial-body-xl-size-desktop-line-height-rem: 5rem;
+  --fds-text-editorial-body-xl-size-desktop-line-height-number: 1.25;
+  --fds-text-editorial-body-m-text-transform: none;
+  --fds-text-editorial-body-m-font-variation-settings: "wdth" 100, "wght" 400,
+    "TITL" 0;
+  --fds-text-editorial-body-m-font-weight: 100;
+  --fds-text-editorial-body-m-default-size-font-size-rem: 0.875rem;
+  --fds-text-editorial-body-m-default-size-font-size-px: 14px;
+  --fds-text-editorial-body-m-default-size-font-size-pt: 10.5;
+  --fds-text-editorial-body-m-default-size-line-height-px: 20px;
+  --fds-text-editorial-body-m-default-size-line-height-rem: 1.25rem;
+  --fds-text-editorial-body-m-default-size-line-height-number: 1.4285714285714286;
+  --fds-text-editorial-body-xl-link-font-family: "HM Sergel Headline",
+    "Garamond", "Times New Roman", Times, serif;
+  --fds-text-editorial-body-xl-link-text-transform: none;
+  --fds-text-editorial-body-xl-link-font-weight: 400;
+  --fds-text-editorial-body-xl-link-text-decoration: underline;
+  --fds-text-editorial-body-xl-link-default-size-font-size-rem: 2rem;
+  --fds-text-editorial-body-xl-link-default-size-font-size-px: 32px;
+  --fds-text-editorial-body-xl-link-default-size-font-size-pt: 24;
+  --fds-text-editorial-body-xl-link-default-size-line-height-px: 42px;
+  --fds-text-editorial-body-xl-link-default-size-line-height-rem: 2.625rem;
+  --fds-text-editorial-body-xl-link-default-size-line-height-number: 1.3125;
+  --fds-text-editorial-body-xl-link-size-desktop-font-size-rem: 4rem;
+  --fds-text-editorial-body-xl-link-size-desktop-font-size-px: 64px;
+  --fds-text-editorial-body-xl-link-size-desktop-font-size-pt: 48;
+  --fds-text-editorial-body-xl-link-size-desktop-line-height-px: 80px;
+  --fds-text-editorial-body-xl-link-size-desktop-line-height-rem: 5rem;
+  --fds-text-editorial-body-xl-link-size-desktop-line-height-number: 1.25;
+  --fds-text-editorial-body-m-link-font-family: "HM Slussen",
+    "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3", "Hiragino Kaku Gothic Pro", Osaka,
+    "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo, "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  --fds-text-editorial-body-m-link-text-transform: none;
+  --fds-text-editorial-body-m-link-font-variation-settings: "wdth" 100,
+    "wght" 400, "TITL" 0;
+  --fds-text-editorial-body-m-link-text-decoration: underline;
+  --fds-text-editorial-body-m-link-font-weight: 100;
+  --fds-text-editorial-body-m-link-default-size-font-size-rem: 0.875rem;
+  --fds-text-editorial-body-m-link-default-size-font-size-px: 14px;
+  --fds-text-editorial-body-m-link-default-size-font-size-pt: 10.5;
+  --fds-text-editorial-body-m-link-default-size-line-height-px: 20px;
+  --fds-text-editorial-body-m-link-default-size-line-height-rem: 1.25rem;
+  --fds-text-editorial-body-m-link-default-size-line-height-number: 1.4285714285714286;
+  --fds-color-contextual-background: #ffffff;
+  --fds-color-contextual-border: #000000;
+  --fds-color-contextual-text: #000000;
+  --fds-color-contextual-title-text: #000000;
+  --fds-color-contextual-icon: #000000;
+  --fds-color-background-default: #ffffff;
+  --fds-color-background-elevated: #ffffff;
+  --fds-color-background-sunken: #f2f2f2;
+  --fds-color-background-overlay: #ffffff;
+  --fds-color-background-blanket: #000000bf;
+  --fds-color-background-veil: #ffffffcc;
+  --fds-color-fill-logo: #eb0010;
+  --fds-color-fill-logo-neutral: #000000;
+  --fds-color-fill-warning: #ff9c00;
+  --fds-color-fill-attention: #ea3340;
+  --fds-color-fill-success: #00bc65;
+  --fds-color-fill-info: #e6e6e6;
+  --fds-color-fill-primary: #000000;
+  --fds-color-fill-primary-hover: #5a5a5a;
+  --fds-color-fill-primary-pressed: #333333;
+  --fds-color-fill-primary-inverse: #ffffff;
+  --fds-color-fill-primary-inverse-hover: #f2f2f2;
+  --fds-color-fill-primary-inverse-pressed: #e6e6e6;
+  --fds-color-fill-secondary: #ffffff;
+  --fds-color-fill-secondary-hover: #f2f2f2;
+  --fds-color-fill-secondary-pressed: #e6e6e6;
+  --fds-color-fill-tertiary: #ffffff00;
+  --fds-color-fill-tertiary-hover: #f2f2f2;
+  --fds-color-fill-tertiary-pressed: #e6e6e6;
+  --fds-color-fill-disabled: #e6e6e6;
+  --fds-color-fill-input: #ffffff;
+  --fds-color-fill-input-hover: #f2f2f2;
+  --fds-color-fill-selected: #000000;
+  --fds-color-fill-selected-hover: #404040;
+  --fds-color-fill-selected-pressed: #262626;
+  --fds-color-fill-selected-disabled: #999999;
+  --fds-color-fill-favourite: #e50010;
+  --fds-color-border-default: #000000;
+  --fds-color-border-subtle: #8c8c8c;
+  --fds-color-border-subtler: #cccccc;
+  --fds-color-border-disabled: #b3b3b3;
+  --fds-color-border-focused: #99d3ff;
+  --fds-color-border-inverse: #ffffff;
+  --fds-color-border-inverse-subtle: #d9d9d9;
+  --fds-color-border-input: #8c8c8c;
+  --fds-color-border-input-hover: #000000;
+  --fds-color-border-input-pressed: #000000;
+  --fds-color-border-selected: #ffffff;
+  --fds-color-border-attention: #b7000d;
+  --fds-color-border-warning: #cc7d00;
+  --fds-color-border-success: #009651;
+  --fds-color-border-info: #0074cc;
+  --fds-color-border-forced-neutral: #000000;
+  --fds-color-text-default: #000000;
+  --fds-color-text-subtle: #737373;
+  --fds-color-text-disabled: #999999;
+  --fds-color-text-inverse: #ffffff;
+  --fds-color-text-inverse-subtle: #f2f2f2;
+  --fds-color-text-warning: #cc7d00;
+  --fds-color-text-attention: #b7000d;
+  --fds-color-text-success: #009651;
+  --fds-color-text-info: #0074cc;
+  --fds-color-text-discount: #eb0010;
+  --fds-color-text-forced-neutral: #000000;
+  --fds-color-icon-default: #000000;
+  --fds-color-icon-subtle: #737373;
+  --fds-color-icon-disabled: #999999;
+  --fds-color-icon-inverse: #ffffff;
+  --fds-color-icon-inverse-subtle: #f2f2f2;
+  --fds-color-icon-warning: #cc7d00;
+  --fds-color-icon-attention: #b7000d;
+  --fds-color-icon-success: #009651;
+  --fds-color-icon-info: #0074cc;
+  --fds-color-icon-discount: #eb0010;
+  --fds-color-icon-forced-neutral: #000000;
+  --fds-color-utility-neutral: #000000;
+  --fds-color-utility-scannable-background: #ffffff;
+  --fds-color-utility-scannable-foreground: #000000;
+  --fds-color-utility-external-logo-background: #ffffff;
+  --fds-color-utility-forced-white: #ffffff;
+  --fds-color-utility-forced-black: #000000;
+  --fds-color-utility-skeleton-background: #f2f2f2;
+  --fds-color-utility-skeleton-gradient-stop: #e6e6e6;
+  --fds-color-utility-shadow: #0000001a;
+  --fds-global-color-swatch-beige: #eccc9b;
+  --fds-global-color-swatch-black: #000000;
+  --fds-global-color-swatch-blue: #0000ff;
+  --fds-global-color-swatch-bronze: #cd7f32;
+  --fds-global-color-swatch-brown: #a52a2a;
+  --fds-global-color-swatch-gold: #d89a00;
+  --fds-global-color-swatch-green: #008000;
+  --fds-global-color-swatch-grey: #808080;
+  --fds-global-color-swatch-orange: #ffa500;
+  --fds-global-color-swatch-pink: #ffc0cb;
+  --fds-global-color-swatch-purple: #800080;
+  --fds-global-color-swatch-red: #ff0000;
+  --fds-global-color-swatch-silver: #c0c0c0;
+  --fds-global-color-swatch-turqouise: #40e0d0;
+  --fds-global-color-swatch-white: #ffffff;
+  --fds-global-color-swatch-yellow: #ffda00;
+  --fds-global-color-vendors-paypal-default: #223954;
+  --fds-global-color-vendors-paypal-multiple: #169bd7;
+  --fds-global-color-vendors-kakao-default: #fee500;
+  --fds-global-color-vendors-kakao-active: #f0d700;
+  --fds-global-color-vendors-kakao-text: #262626;
+  --fds-global-color-vendors-kakao-icon: #000000;
+  --fds-global-color-vendors-facebook: #39579b;
+  --fds-global-color-vendors-twitter: #1ea9e3;
+  --fds-global-color-vendors-pinterest: #cd1d1e;
+  --fds-global-color-vendors-instagram: #125688;
+  --fds-global-color-vendors-spotify: #00e461;
+  --fds-global-color-vendors-snapchat: #fffc00;
+  --fds-global-color-vendors-tumblr: #35465c;
+  --fds-global-color-vendors-googleplus: #d34836;
+  --fds-global-color-vendors-youtube: #ff0000;
+  --fds-global-color-vendors-linkedin: #0077b7;
+  --fds-default-palette-background: #ffffff;
+  --fds-default-palette-icon: #000000;
+  --fds-default-palette-text: #000000;
+  --fds-default-palette-border: #000000;
+  --fds-default-palette-title-text: #000000;
+  --fds-black-friday-palette-background: #000000;
+  --fds-black-friday-palette-icon: #eb0010;
+  --fds-black-friday-palette-text: #eb0010;
+  --fds-black-friday-palette-border: #cccccc;
+  --fds-black-friday-palette-title-text: #eb0010;
+  --fds-sale-palette-background: #ffffff;
+  --fds-sale-palette-icon: #eb0010;
+  --fds-sale-palette-text: #eb0010;
+  --fds-sale-palette-border: #cccccc;
+  --fds-sale-palette-title-text: #eb0010;
+  --fds-deals-palette-background: #ffffff;
+  --fds-deals-palette-icon: #000000;
+  --fds-deals-palette-text: #000000;
+  --fds-deals-palette-border: #000000;
+  --fds-deals-palette-title-text: #000000;
+  --fds-cyber-monday-palette-background: #ffffff;
+  --fds-cyber-monday-palette-icon: #000000;
+  --fds-cyber-monday-palette-text: #000000;
+  --fds-cyber-monday-palette-border: #000000;
+  --fds-cyber-monday-palette-title-text: #374894;
+  --fds-on-dark-image-palette-background: #ffffff;
+  --fds-on-dark-image-palette-icon: #000000;
+  --fds-on-dark-image-palette-text: #000000;
+  --fds-on-dark-image-palette-border: #000000;
+  --fds-on-dark-image-palette-title-text: #ffffff;
+  --fds-on-light-image-palette-background: #000000;
+  --fds-on-light-image-palette-icon: #ffffff;
+  --fds-on-light-image-palette-text: #ffffff;
+  --fds-on-light-image-palette-border: #ffffff;
+  --fds-on-light-image-palette-title-text: #000000;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html[lang="bg-BG"] {
+  font-feature-settings: "locl" 0;
+}
+@supports (-webkit-backdrop-filter: blur(1px)) {
+  html[lang="bg-BG"] {
+    -webkit-locale: "en";
+  }
+}
+body {
+  line-height: var(--body-text-default-default-size-line-height-number);
+  font-size: var(--body-text-default-default-size-font-size-rem);
+  font-variation-settings: var(--body-text-default-font-variation-settings);
+  font-family: var(--body-text-default-font-family);
+  font-weight: var(--body-text-default-font-weight);
+  text-transform: var(--body-text-default-text-transform);
+  background-color: var(--fds-color-background-default);
+  color: var(--fds-color-text-default);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  padding: 0;
+}

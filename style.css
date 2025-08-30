@@ -1,0 +1,140 @@
+/* Import af Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Lavet med hjælp fra H&M's css fil*/
+:root {
+  --color-primary: #e50010;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-grey-dark: #222222;
+  --color-grey: #737373;
+  --color-grey-light: #f2f2f2;
+  --border-subtle: #cccccc;
+
+  /* Typografi størrelser */
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-s: 0.875rem; /* 14px */
+  --font-size-m: 1rem; /* 16px */
+  --font-size-l: 1.125rem; /* 18px */
+  --font-size-xl: 1.25rem; /* 20px */
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 600;
+
+  --text-transform-uppercase: uppercase;
+  --text-transform-none: none;
+  --text-transform-lowercase: lowercase;
+
+  --line-height-xs: 0.975rem; /* 14px */
+  --line-height-s: 1rem; /* 16px */
+  --line-height-m: 1.3rem;  /* 20px */
+  --line-height-l: 1.65rem; /* 24px */
+  --line-height-xl: 2.2rem; /* 32px */
+
+  /* Spacing */
+  --spacing-none-px: 0px;
+  --spacing-none-rem: 0rem;
+  --spacing-xxxs-px: 2px;
+  --spacing-xxxs-rem: 0.125rem;
+  --spacing-xxs-px: 4px;
+  --spacing-xxs-rem: 0.25rem;
+  --spacing-xs-px: 8px;
+  --spacing-xs-rem: 0.5rem;
+  --spacing-s-px: 16px;
+  --spacing-s-rem: 1rem;
+  --spacing-m-px: 24px;
+  --spacing-m-rem: 1.5rem;
+  --spacing-l-px: 32px;
+  --spacing-l-rem: 2rem;
+  --spacing-xl-px: 40px;
+  --spacing-xl-rem: 2.5rem;
+  --spacing-xxl-px: 48px;
+  --spacing-xxl-rem: 3rem;
+  --spacing-xxl-2-px: 56px;
+  --spacing-xxl-2-rem: 3.5rem;
+
+  --z-index-toast-notification: 3200;
+  --z-index-panel: 3100;
+  --z-index-overlay: 3000;
+  --z-index-dropdown: 1000;
+  --z-index-tooltip: 1000;
+
+  --shadow-static-xAxis: 0px;
+  --shadow-static-yAxis: 12px;
+  --shadow-static-blur: 32px;
+  --shadow-static-spread: 0px;
+  --shadow-static-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Global stil */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--font-size-s);
+  color: var(--color-black);
+  background-color: var(--color-white);
+
+  line-height: var(--line-height-m);
+  font-weight: var(--font-weight-regular);
+  text-transform: var(--text-transform-none);
+
+  margin: 0;
+  padding: 0;
+
+  overflow-x: hidden;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  margin: 0 0 var(--spacing-xs-px);
+  color: var(--color-black);
+  text-transform: var(--text-transform-uppercase);
+}
+
+h1 {
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-regular);
+}
+h2 {
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-s);
+}
+h3 {
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-s);
+}
+
+/* Links */
+a {
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-grey);
+}
+
+.interactive-element {
+  cursor: pointer;
+}
+
+.bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.underline {
+  text-decoration: underline;
+}
