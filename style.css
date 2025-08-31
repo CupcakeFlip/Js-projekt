@@ -384,9 +384,9 @@ button {
   }
 }
 
+/*FORSIDE*/
 @media screen and (min-width: 599px) {
   .hero {
-    height: 100vh; 
     overflow: hidden;
   }
 
@@ -397,11 +397,35 @@ button {
   }
 }
 
-/*SKALERING - MELLEM SKÆRM*/
 @media screen and (min-width: 1024px) {
     .hero img {
     height: 570px; 
     object-fit: cover;
     object-position: 40%;
+    width: 100%;
   }
+}
+
+@media screen and (min-width: 1440px) {
+    .hero img {
+    object-fit: cover;
+    width: 100%;
+    height: 80%;
+}
+}
+
+.frontpage-images {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.frontpage-images video {
+  height: auto;
+  width: 100%;
+}
+
+.main__index p, a {
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+  display: inline-block;
 }
