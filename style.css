@@ -223,12 +223,14 @@ button {
   font-size: 14px;
   justify-content: center;
 }
+
 .navbar__right button img {
   /* størrelsen på ikonerne */
   height: 18px;
   width: auto;
   display: block;
 }
+
 .navbar__cart-count[data-count="0"] {
   display: none;
 }
