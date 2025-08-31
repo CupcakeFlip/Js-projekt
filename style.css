@@ -105,7 +105,69 @@ body {
 
   overflow-x: hidden;
 }
+/* header */ 
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar__left {
+  display: flex; 
+  flex-direction: row;
+  gap: 10px;
+}
+
+.navbar__left ul{
+  display: flex;
+  align-items: left;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar__left ul li{ /* Det her er listen og størrelsen på skriften */
+    font-size: 12px;
+    font-weight: 500;
+    }
+.navbar__left--logo img {
+  height: 60px;
+  margin-right: 10px;
+}
+
+/* HØJRE SIDE: ikoner */
+
+.navbar__right { /* Det her er søgefeltet og knapperne til indkøbskurv favoritter m.m. */
+  display: flex;
+  align-items: center;
+  
+}
+.navbar__right ul{ /* UL for ikoner gør dem vandret */
+  display: flex;
+  align-items: center;
+    list-style: none;
+    gap: 10px;
+}
+
+.navbar__right button { /*boksene forsvinder */
+  background-color: transparent;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  justify-content: center;
+}
+.navbar__right button img { /* størrelsen på ikonerne */
+  height: 18px;
+  width: auto;
+  display: block;
+}
+.navbar__cart-count[data-count="0"] {
+  display: none;
+}
+/*header slut */
 /* Headings */
 h1,
 h2,
