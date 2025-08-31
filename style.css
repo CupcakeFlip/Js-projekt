@@ -368,6 +368,7 @@ button {
   .product-gallery {
     display: grid;
   }
+
 }
 @media screen and (min-width: 1024px) {
   .product-info {
@@ -380,5 +381,27 @@ button {
   .product-info {
     width: 458px;
     padding-top: var(--spacing-xxxxxl-px);
+  }
+}
+
+@media screen and (min-width: 599px) {
+  .hero {
+    height: 100vh; 
+    overflow: hidden;
+  }
+
+  .hero img {
+    height: 800px; 
+    object-fit: cover;
+    object-position: 40%;
+  }
+}
+
+/*SKALERING - MELLEM SKÆRM*/
+@media screen and (min-width: 1024px) {
+    .hero img {
+    height: 570px; 
+    object-fit: cover;
+    object-position: 40%;
   }
 }
