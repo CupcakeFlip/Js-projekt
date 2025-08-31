@@ -11,8 +11,11 @@
   <body>
     <header>
       <nav>
+        <div class="navbar">
         <div class="navbar__left">
-          <div class="navbar__left--logo"></div>
+          <div class="navbar__left--logo">
+            <img src="Logo.png" alt="Logo" />
+          </div>
           <div class="navbar__left--menu">
             <ul>
               <li>DAME</li>
@@ -23,7 +26,32 @@
             </ul>
           </div>
         </div>
-        <div class="navbar__right"></div>
+        <div class="navbar__right">
+          <ul class="navbar__right--icons">
+            <li class="navbar__right--menu-icon">
+              <button id="Search-button">
+                <img src="svgexport-3.svg" alt="Search Icon" />
+              </button>
+            </li>
+              <li>
+              <button id="login-button">
+                <img src="svgexport-4.svg" alt="login Icon" />
+              </button>
+            </li>
+            <li>
+              <button class="favorite-button">
+                <img src="svgexport-5.svg" alt="favorite Icon" />
+              </button>
+            </li>
+            <li>
+              <button id="shopping-cart-button" class="shopping-cart-button">
+                <img src="svgexport-6.svg" alt="cart Icon" />
+                <span id="cart-count" class="navbar__cart-count" data-count="0">0</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
       </nav>
     </header>
     <main class="main__index">
