@@ -1,3 +1,5 @@
+let currentProductGalleri = document.getElementById(productGalleri);
+
 function Product(id, color, sizeRange, sizes, pictures) {
   this.id = id;
   this.color = color;
@@ -17,6 +19,7 @@ const sizeRangeXXSto4XL = [
   "3XL",
   "4XL",
 ];
+
 const sizeRangeXXStoXXL = ["XXS", "XS", "S", "M", "L", "XL", "XXL"];
 const sizeRangeXStoXXL = ["XS", "S", "M", "L", "XL", "XXL"];
 
@@ -183,5 +186,3 @@ const products = [
   sortHvidStribet,
   rosa,
 ];
-
-console.log(products);
