@@ -45,5 +45,5 @@ const gallery = [
 ];
 
 for (let i = 0; i < gallery.length; i++) {
-    
+    output.innerHTML += gallery[i].image;
 }
