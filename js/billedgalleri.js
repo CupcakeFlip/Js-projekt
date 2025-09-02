@@ -1,4 +1,4 @@
-const galleryContainer = document.getElementById("gallery");
+const galleryContainer = document.getElementById("billedgalleri");
 
 function Product(image, productName, price) {
     this.image = image;
@@ -45,5 +45,7 @@ const gallery = [
 ];
 
 for (let i = 0; i < gallery.length; i++) {
-    output.innerHTML += gallery[i].image;
+    galleryContainer.innerHTML += "<img src='" + gallery[i].image + "'>";
+    galleryContainer.innerHTML += gallery[i].productName;
+    galleryContainer.innerHTML += gallery[i].price;
 }
