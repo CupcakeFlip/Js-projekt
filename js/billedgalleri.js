@@ -1,3 +1,5 @@
+const galleryContainer = document.getElementById("gallery");
+
 function Product(image, productName, price) {
     this.image = image;
     this.productName = productName;
@@ -41,3 +43,7 @@ const gallery = [
     baggyHighJeans2,
     sneakers2 
 ];
+
+for (let i = 0; i < gallery.length; i++) {
+    
+}
