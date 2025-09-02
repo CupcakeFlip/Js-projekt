@@ -215,52 +215,45 @@ const products = [
   rosa,
 ];
 
+// Get references to key DOM elements for product gallery, color, thumbnails, size selection, and size options
 let currentGallery = document.getElementById("productGallery");
 let currentColor = document.getElementById("thisProductColor");
 let thumbnails = document.getElementById("selectionContainer");
 let selectedSizeText = document.getElementById("thisProductSizeSelection");
 let sizeOptions = document.getElementById("thisProductSizeContainer");
 
-/**
- * The function `showProductImages` takes a product object as input and dynamically creates and appends
- * image elements to a gallery container based on the picture sources provided in the product object.
- * @param product - The `product` parameter is an object that contains information about a specific
- * product. It includes details such as the product name, color, price, and an array of picture sources
- * (`pictures`) that represent different images of the product.
- */
+// Dynamically create and append image elements for the product's gallery
 function showProductImages(product) {
   product.pictures.forEach((pictureSrc) => {
     const img = document.createElement("img");
     img.src = pictureSrc;
-    img.alt = product.color; // eller en mere specifik alt-tekst hvis du har
+    img.alt = product.color; // Use product color as alt text
     currentGallery.appendChild(img);
   });
 }
 
-/**
- * The function `showSizes` dynamically creates buttons for each size in a product's size range,
- * styling them based on availability.
- * @param product - The `product` parameter seems to be an object that contains information about sizes
- * and size ranges. It has properties like `sizeRange` which is an array of size ranges, and `sizes`
- * which is an array of available sizes. The `showSizes` function is designed to create buttons for
- * each
- */
+// Dynamically create size buttons for the product, styling based on availability
 function showSizes(product) {
   product.sizeRange.forEach((sizeRange) => {
     const sizeBtn = document.createElement("button");
 
-    product.sizes.includes(sizeRange)
-      ? sizeBtn.classList.add(
-          "product-info__size-btn",
-          "product-info__size-btn--available"
-        )
-      : sizeBtn.classList.add(
-          "product-info__size-btn",
-          "product-info__size-btn--not-available"
-        );
+    // Add BEM classes for available or not-available sizes using if-else
+    if (product.sizes.includes(sizeRange)) {
+      sizeBtn.classList.add(
+        // Hvis størrelsen er tilgængelig, tilføj disse klasser
+        "product-info__size-btn",
+        "product-info__size-btn--available"
+      );
+    } else {
+      sizeBtn.classList.add(
+        // Hvis størrelsen ikke er tilgængelig, tilføj disse klasser
+        "product-info__size-btn",
+        "product-info__size-btn--not-available"
+      );
+    }
     sizeBtn.textContent = sizeRange;
 
-    // Add click event to select size
+    // Add click event to select size and set active state
     sizeBtn.addEventListener("click", function () {
       // Remove btn-active from all size buttons
       document.querySelectorAll(".product-info__size-btn").forEach((btn) => {
@@ -274,52 +267,70 @@ function showSizes(product) {
   });
 }
 
+// Set up the product gallery, sizes, and color name for the selected product
 function setUpProduct(product) {
+  // Clear previous gallery images and size buttons
+  currentGallery.innerHTML = "";
+  sizeOptions.innerHTML = "";
+  // Show new product images and sizes
   showProductImages(product);
   showSizes(product);
+  // (Optional) Set thumbnail class to active (not used directly here)
   product.thumbnail.className = "btn-active";
+  // Update color name in the UI
+  currentColor.innerHTML = product.color;
 }
 
-var src = window.addEventListener("DOMContentLoaded", function () {
-  // All your DOM-related code here
-  currentGallery.innerHTML = "";
-  currentColor.innerHTML = products[0].color;
-  selectionContainer.innerHTML = ""; // Tøm containeren først
-  sizeOptions.innerHTML = ""; // Tøm containeren først
+// Wait for the DOM to be fully loaded before running setup code
+window.addEventListener("DOMContentLoaded", function () {
+  thumbnails.innerHTML = ""; // Clear the thumbnail container first
 
-  // Opsætning af det første primære farve
+  // Set up the initial product (first color as default)
   setUpProduct(products[0]);
 
-  // Tilføj thumbnails for alle produkter
+  // Add color thumbnails for all products
   products.forEach((product, i) => {
     const thumbDiv = document.createElement("div");
     thumbDiv.className = "product-info__color-thumb";
-    thumbDiv.dataset.color = product.color; // Gem farvenavnet
+    thumbDiv.dataset.color = product.color;
 
+    // Mark the first thumbnail as active by default
     if (i === 0) {
       thumbDiv.classList.add("btn-active");
     }
 
+    // Create and append the thumbnail image
     const img = document.createElement("img");
     img.src = product.thumbnail.src;
     img.alt = product.thumbnail.alt;
     thumbDiv.appendChild(img);
 
-    // Mouseover: vis farvenavn
+    // On mouseover, show the color name for the hovered thumbnail
     thumbDiv.addEventListener("mouseover", function () {
       currentColor.innerHTML = product.color;
     });
-
-    // Mouseout: sæt tilbage til valgt farve (her: første produkt)
+    // On mouseout, revert to the active color name
     thumbDiv.addEventListener("mouseout", function () {
-      // Find den aktive thumbnail og brug dens farve
       const activeIndex = Array.from(selectionContainer.children).findIndex(
         (div) => div.classList.contains("btn-active")
       );
       currentColor.innerHTML = products[activeIndex].color;
     });
 
+    // On click: update gallery, color, and set this thumbnail as active
+    thumbDiv.addEventListener("click", function () {
+      // Remove btn-active from all thumbnails
+      document.querySelectorAll(".product-info__color-thumb").forEach((div) => {
+        div.classList.remove("btn-active");
+      });
+      // Add btn-active to the clicked thumbnail
+      thumbDiv.classList.add("btn-active");
+
+      // Update the product view to match the selected color
+      setUpProduct(product);
+    });
+
+    // Add the thumbnail to the selection container
     selectionContainer.appendChild(thumbDiv);
   });
 });
-
