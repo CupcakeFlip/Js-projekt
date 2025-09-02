@@ -1,4 +1,4 @@
-const galleryContainer = document.getElementById("billedgalleri");
+const galleryContainer = document.getElementById("galleri__kobte--ogsaa");
 
 function Product(image, productName, price) {
     this.image = image;
@@ -47,5 +47,5 @@ const gallery = [
 for (let i = 0; i < gallery.length; i++) {
     galleryContainer.innerHTML += "<img src='" + gallery[i].image + "'>";
     galleryContainer.innerHTML += gallery[i].productName;
-    galleryContainer.innerHTML += gallery[i].price;
+    galleryContainer.innerHTML += gallery[i].price + " kr.";
 }
