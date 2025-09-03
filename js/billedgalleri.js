@@ -90,6 +90,7 @@ prevBtn.addEventListener("click", () => {
 
 // Denne næste del gør, at når man ikke kan klikke sig længere gennem array'et, så bliver pilene (enten next eller prev) grå/disabled, så man ikke kan trykke videre på dem.
 // Dette gælder dog ikke til hvis man scroller igennem - der vil knapperne forblive.
+// For some reason skal man trykke 2 gange for at knappen bliver disabled, men det ved jeg ikke hvordan man fixer.
 
 function updateButtons() {
   if (galleryContainer.scrollLeft <= 0) {
