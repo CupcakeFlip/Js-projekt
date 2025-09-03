@@ -207,7 +207,7 @@ nav {
 /* Submenu som flex-container med to kolonner */
 .submenu {
   position: fixed;
-  top: 50px;
+  top: 60px;
   left: 0; 
   transform: translateX(-100%);
   opacity: 0;
