@@ -86,3 +86,32 @@ nextBtn.addEventListener("click", () => {
 prevBtn.addEventListener("click", () => {
     galleryContainer.scrollLeft -= scrollAmount;
 });
+
+
+// Denne næste del gør, at når man ikke kan klikke sig længere gennem array'et, så bliver pilene (enten next eller prev) grå/disabled, så man ikke kan trykke videre på dem.
+// Dette gælder dog ikke til hvis man scroller igennem - der vil knapperne forblive.
+
+function updateButtons() {
+  if (galleryContainer.scrollLeft <= 0) {
+    prevBtn.disabled = true;
+  } else {
+    prevBtn.disabled = false;
+  }
+
+  if (galleryContainer.scrollLeft + galleryContainer.offsetWidth >= galleryContainer.scrollWidth) {
+    nextBtn.disabled = true;
+  } else {
+    nextBtn.disabled = false;
+  }
+}
+nextBtn.addEventListener("click", () => {
+  galleryContainer.scrollLeft += scrollAmount;
+  updateButtons();
+});
+
+prevBtn.addEventListener("click", () => {
+  galleryContainer.scrollLeft -= scrollAmount;
+  updateButtons();
+});
+
+updateButtons();

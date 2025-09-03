@@ -540,3 +540,8 @@ a {
 .product__images {
   width: 600px;
 }
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
