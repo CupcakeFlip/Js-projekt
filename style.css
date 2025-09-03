@@ -171,32 +171,159 @@ button {
   border: none;
 }
 
-/* Header */
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* ------------------------------------------ */
+/*               MENU OG SUBMENU              */
+/* ------------------------------------------ */
+nav {
   padding: 10px 20px;
   background-color: var(--color-white);
 }
-.navbar__left {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
 
-.navbar__left ul {
-  display: flex;
-  align-items: left;
+.menu {
   list-style: none;
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.navbar__left--logo img {
-  width: 37px;
-  height: 24px;
-  margin-right: 10px;
+.menu li {
+  position: relative;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--color-grey);
+  font-weight: var( --font-weight-regular);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.3s, color 0.3s;
+}
+
+.menu li:hover > a {
+  color: var(--color-black);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Submenu som flex-container med to kolonner */
+.submenu {
+  position: fixed;
+  top: 50px;
+  left: 0; 
+  transform: translateX(-100%);
+  opacity: 0;
+  background-color: var(--color-white);
+  padding: 20px;
+  list-style: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  pointer-events: none;
+  width: 50vw;
+  display: flex;        /* Flex container */
+  gap: 40px;          /* Afstand mellem kolonner */
+  align-items: flex-start;
+}
+
+.submenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.submenu ul:last-child {
+  margin-left: auto; /* Skubber billedlisten længst til højre */
+}
+
+/* Tekster i venstre kolonne */
+.submenu li a {
+  color: var(--color-black);
+  font-weight: var(--font-weight-regular);
+  display: block;
+  padding: 5px 0;
+}
+
+.submenu li a:hover {
+  color: var(--color-grey);
+}
+
+.submenu li img {
+  display: block;
+  max-width: 200px;   /* styrer billedbredde */
+  height: auto;
+  margin-bottom: 10px; /* afstand mellem billederne */
+}
+
+/* Når man hover over li, slider submenuen ind */
+li:hover > .submenu {
+  transform: translateX(0); /* glider ind til sin position */
+  opacity: 1;               /* bliver synlig */
+  pointer-events: auto;     /* submenuen kan klikkes */
+}
+
+.highlight-sub {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-m);
+}
+
+.submenu li.last-chance a {
+  color: var(--color-primary);
+  margin-top: 40px;
+}
+
+.marginTop {
+  margin-top: 40px;
+}
+
+.hamburger,
+.navbar__toggle,
+.navbar__close {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .hamburger,
+  .navbar__close {
+    display: block;
+    font-size: 26px;
+    color: var(--color-black);
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  .navbar__close {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .menu li {
+    flex: 1;
+    text-align: center;
+  }
+
+  .submenu {
+    position: static;
+    display: none;
+    position: static;
+    width: 100%;
+    flex-direction: column;
+    padding: 10px 0;
+    background: var(--color-white);
+    transition: none;
+  }
+
+  .highlight-sub {
+  font-size: var(--font-size-s);
+  }
+
+  .submenu ul:last-child { 
+    display: none; /* skjul billeder */
+  }
 }
 
 /* HØJRE SIDE: ikoner */
