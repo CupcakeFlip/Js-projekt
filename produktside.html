@@ -11,58 +11,59 @@
     <script src="js/login.js" defer></script>
     <script src="js/billedgalleri.js" defer></script>
   </head>
-
   <body>
     <header>
+      
       <nav>
-        <div class="navbar">
-          <div class="navbar__left">
-            <div class="navbar__left--logo">
-              <img src="image/hmlogo.svg" alt="Logo" />
-            </div>
-            <div class="navbar__left--menu">
-              <ul>
-                <li>DAME</li>
-                <li>HERRE</li>
-                <li>BØRN</li>
-                <li>HOME</li>
-                <li>BEAUTY</li>
-              </ul>
-            </div>
-          </div>
-          <div class="navbar__right">
-            <ul class="navbar__right--icons">
-              <li class="navbar__right--menu-icon">
-                <button id="Search-button">
-                  <img src="image/svgexport-3.svg" alt="Search Icon" />
-                </button>
-              </li>
+        <div class="navbar__logo">  <!-- oliver - logo -->
+          <a href="index.html">
+          <img src="image/Logo.png" alt="Logo">
+          </a>
+        </div> <!-- oliver - logo slut -->
+      <!-- Joses del af koden -->
+      <button class="hamburger navbar__toggle">&#9776;</button>
+      <button class="navbar__close">✕</button>
+      <div>
+        <ul class="menu navbar__list" id="menu"></ul>
+      </div>
+      <!-- Joses del af koden slut -->
+       <!-- Oliver del af koden start -->
+        <div class="navbar__right"> <!-- ikoner til højre side -->
+          <ul class="navbar__right--icons">
+            <li class="navbar__right--menu-icon">
+              <button id="Search-button">
+                <img src="image/svgexport-3.svg" alt="Search Icon" />
+              </button>
+            </li>
               <li>
-                <button id="login-button">
-                  <img src="image/svgexport-4.svg" alt="login Icon" />
-                </button>
-              </li>
-              <li>
-                <button class="favorite-button">
-                  <img src="image/svgexport-5.svg" alt="favorite Icon" />
-                </button>
-              </li>
-              <li>
-                <button id="shopping-cart-button" class="shopping-cart-button">
-                  <img src="image/svgexport-6.svg" alt="cart Icon" />
-                  <span
-                    id="cart-count"
-                    class="navbar__cart-count"
-                    data-count="0"
-                    >0</span
-                  >
-                </button>
-              </li>
-            </ul>
-          </div>
+              <button id="login-button">
+                <img src="image/svgexport-4.svg" alt="login Icon" />
+              </button>
+            </li>
+            <li>
+              <button class="favorite-button">
+                <img src="image/svgexport-5.svg" alt="favorite Icon" />
+              </button>
+            </li>
+            <li>
+              <button id="shopping-cart-button" class="shopping-cart-button">
+                <img src="image/svgexport-6.svg" alt="cart Icon" />
+                <span id="cart-count" class="navbar__cart-count" data-count="0">0</span>
+             </button>
+            </li>
+          </ul>
         </div>
-      </nav>
-    </header>
+      </div>
+      </nav> <!-- ikoner til højre side -->     
+          <div class="cart-overlay"> <!-- Tom-tilstanden (beholdes) -->
+            <div class="cart-empty">
+              <h3>Kurven er tom</h3>
+              <button class="continueshopping-button">FORTSÆT MED AT HANDLE</button>
+            </div>
+            <!-- Plads til mini-kurv når der er varer tilført (starter skjult primært kun side 2) -->
+            <div class="cart-body hidden"></div>
+          </div>
+  </header>
 
     <main class="product">
       <!-- Det valgte produkt galleri-->

@@ -288,6 +288,7 @@ li:hover > .submenu {
     border: none;
     cursor: pointer;
     margin-bottom: 10px;
+
   }
 
   .navbar__close {
@@ -329,21 +330,19 @@ li:hover > .submenu {
 
 /* HØJRE SIDE: ikoner */
 
-.navbar__right {
-  /* Det her er søgefeltet og knapperne til indkøbskurv favoritter m.m. */
+.navbar__right { /* Det her er søgefeltet og knapperne til indkøbskurv favoritter m.m. */
   display: flex;
   align-items: center;
+  
 }
-.navbar__right ul {
-  /* UL for ikoner gør dem vandret */
+.navbar__right ul{ /* UL for ikoner gør dem vandret */
   display: flex;
   align-items: center;
-  list-style: none;
-  gap: 10px;
+    list-style: none;
+    gap: 10px;
 }
 
-.navbar__right button {
-  /*boksene forsvinder */
+.navbar__right button { /*boksene forsvinder */
   background-color: transparent;
   border: none;
   padding: 8px 12px;
@@ -351,18 +350,143 @@ li:hover > .submenu {
   font-size: 14px;
   justify-content: center;
 }
-
-.navbar__right button img {
-  /* størrelsen på ikonerne */
+.navbar__right button img { /* størrelsen på ikonerne */
   height: 18px;
   width: auto;
   display: block;
 }
-
-.navbar__cart-count[data-count="0"] {
-  display: none;
+.navbar__cart-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1;
+  background: black;
+  color: white;
 }
 
+/* skjul kun når data-count er "0" */
+.navbar__cart-count[data-count="0"] {
+  display: none; 
+}
+/*header slut */
+/* Kurv */
+header {
+  position: relative;
+}
+
+.cart-overlay {
+  display: none;
+  position: absolute;
+  top: 100%;   /* placér under knappen */
+  right: 0;    /* justér så den flugter til højre */
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  width: 350px;  /* fx en fast bredde */
+  z-index: 1000;
+}
+
+
+.cart-overlay.active {
+  display: block;
+}
+
+.cart-overlay h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.continueshopping-button {
+  background-color: black;   /* sort baggrund, men sker ikke noget */
+  color: white;              /* hvid tekst, men sker ikke noget. */
+  border: none;       
+  padding: 12px 20px;        
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;           
+  width: 100%;              
+  margin-top: 10px;         
+}
+
+.continueshopping-button:hover {
+  background-color: #333;    /* lidt lysere sort på hover */
+}
+/* helper */
+.hidden { display: none; }
+
+/* containeren der får dynamisk indhold når der ER varer */
+.cart-body { padding: 16px; }
+
+/* én varelinje (vi viser pt. første vare) */
+.cart-line {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.cart-line__img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border: 1px solid #eee;
+}
+.cart-line__title { font-weight: 700; margin: 0 0 4px; }
+.cart-line__meta  { font-size: 12px; color: #444; margin: 2px 0; }
+
+/* summering */
+.cart-sum {
+  border-top: 1px solid #e6e6e6;
+  margin-top: 12px;
+  padding-top: 12px;
+}
+.cart-sum__row { display: flex; justify-content: space-between; margin: 6px 0; }
+.cart-sum__total { font-weight: 700; }
+
+/* knapper */
+.cart-actions { margin-top: 16px; }
+.cart-actions .btn {
+  width: 100%;
+  padding: 14px 16px;
+  font-weight: 600;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+.cart-actions .btn--primary { background: #000; color: #fff; margin-bottom: 8px; }
+.cart-actions .btn--secondary { background: #fff; color: #000; }
+/* === logo kommer før burger - ny oliver === */
+.navbar__logo {            
+  display: flex;
+  align-items: center;
+}
+.navbar__logo img { 
+  height: 60px;
+  margin-right: 20px;
+}
+ 
+/* === header alignment justeret - ny oliver === */
+@media (min-width: 961px) {
+  nav {                       
+    display: flex;
+    align-items: center;
+  }
+
+  .menu {                     
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .navbar__right {          
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+}
 /* Header slut */
 
 /*--------------*/
