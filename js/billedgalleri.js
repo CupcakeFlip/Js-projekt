@@ -46,11 +46,26 @@ const gallery = [
     sneakers2 
 ];
 
+
+for (let i = 0; i < gallery.length; i++) {
+    galleryContainer.innerHTML +=
+        '<div class="product__container">' +
+            '<img src="' + gallery[i].image + '" class="product__images" alt="' + gallery[i].productName + '">' +
+            '<p class="product__name">' + gallery[i].productName + '</p>' +
+            '<p class="product__price">' + gallery[i].price + ' kr.</p>' +
+        '</div>';
+}
+
+
+/*
 for (let i = 0; i < gallery.length; i++) {
     galleryContainer.innerHTML += "<img src='" + gallery[i].image + "'>";
     galleryContainer.innerHTML += gallery[i].productName;
     galleryContainer.innerHTML += gallery[i].price + " kr.";
 }
+*/
+
+
 
 // Nedenstående er lavet med hjælp af ChatGPT for at kunne rykke et billede ad gangen når man trykker på frem-/tilbageknapperne.
 // Som det er lige nu, scroller den hele containeren igennem, da jeg ikke kan få den til at rykke ét billede ad gangen. 
