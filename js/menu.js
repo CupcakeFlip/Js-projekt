@@ -11,7 +11,7 @@ const menu = [
   {
     navn: "DAME",
     submenu: ["NYHEDER", "EDITS", "THE STUDIO", "BESTSELLER", "TØJ", "ACCESSORIES", "SKO", "BEAUTY", "SPORT", "LAST CHANCE", "MEMBER PRICES", "GAVER", "ALLE MÆRKER", "BÆREDYGTIGHED", "SECONDHAND & GARMENT CARE", "KUNDESERVICE", "NEWSLETTER", "FIND BUTIK", "DOWNLOAD ANDROID", "DOWNLOAD IOS"],
-    picture: ["images/dame 1.avif", "images/dame 2.avif", "images/dame 3.avif", "images/dame 4.avif"]
+    picture: ["image/submenu/dame 1.avif", "image/submenu/dame 2.avif", "image/submenu/dame 3.avif", "image/submenu/dame 4.avif"]
     
   },
   {
@@ -21,14 +21,14 @@ const menu = [
       "LAST CHANCE", "MEMBER PRICES", "GAVER", "ALLE MÆRKER",
       "BÆREDYGTIGHED", "SECONDHAND & GARMENT CARE", "KUNDESERVICE",
       "NEWSLETTER", "FIND BUTIK", "DOWNLOAD ANDROID", "DOWNLOAD IOS"],
-    picture: ["images/herre 1.avif", "images/herre 2.avif", "images/herre 3.avif", "images/herre 4.avif"]
+    picture: ["image/submenu/herre 1.avif", "image/submenu/herre 2.avif", "image/submenu/herre 3.avif", "image/submenu/herre 4.avif"]
   },
   {
     navn: "BØRN",
     submenu: ["NYFØDT", "BABY", "2-8 ÅR", "9-14 ÅR",
       "BÆREDYGTIGHED", "SECONDHAND & GARMENT CARE", "KUNDESERVICE",
       "NEWSLETTER", "FIND BUTIK", "DOWNLOAD ANDROID", "DOWNLOAD IOS"],
-    picture: ["images/born 1.avif", "images/born 2.avif", "images/born 3.avif"]
+    picture: ["image/submenu/born 1.avif", "image/submenu/born 2.avif", "image/submenu/born 3.avif"]
   },
   {
     navn: "HOME",
@@ -40,7 +40,7 @@ const menu = [
       "LAST CHANCE", "GAVER", "ALLE MÆRKER",
       "BÆREDYGTIGHED", "SECONDHAND & GARMENT CARE", "KUNDESERVICE",
       "NEWSLETTER", "FIND BUTIK", "DOWNLOAD ANDROID", "DOWNLOAD IOS"],
-    picture: ["images/home 1.avif", "images/home 2.avif", "images/home 3.avif", "images/home 4.avif"]
+    picture: ["image/submenu/home 1.avif", "image/submenu/home 2.avif", "image/submenu/home 3.avif", "image/submenu/home 4.avif"]
   },
   {
     navn: "BEAUTY",
@@ -51,7 +51,7 @@ const menu = [
       "GUIDES", "BÆREDYGTIGHED", "SECONDHAND & GARMENT CARE",
       "KUNDESERVICE", "NEWSLETTER", "FIND BUTIK", "DOWNLOAD ANDROID",
       "DOWNLOAD IOS"],
-    picture: ["images/beauty 1.avif", "images/beauty 2.avif", "images/beauty 3.avif"]
+    picture: ["image/submenu/beauty 1.avif", "image/submenu/beauty 2.avif", "image/submenu/beauty 3.avif"]
   }
 ];
 
