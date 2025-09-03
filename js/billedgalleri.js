@@ -1,3 +1,5 @@
+console.log("Det virker!")
+
 const galleryContainer = document.getElementById("galleri__kobte--ogsaa");
 
 function Product(image, productName, price) {
@@ -49,3 +51,23 @@ for (let i = 0; i < gallery.length; i++) {
     galleryContainer.innerHTML += gallery[i].productName;
     galleryContainer.innerHTML += gallery[i].price + " kr.";
 }
+
+// Nedenstående er lavet med hjælp af ChatGPT for at kunne rykke et billede ad gangen når man trykker på frem-/tilbageknapperne.
+// Som det er lige nu, scroller den hele containeren igennem, da jeg ikke kan få den til at rykke ét billede ad gangen. 
+// Promt (finpudsning af svar er sket efterfølgende, og der har været en samtale forude for denne promt): 
+// "Men knappen skal gøre sådan så alle billeder stadig vises, men der er et overflow, som så derefter "rykker" ét billede af gangen. Så lad os sige at der er billeder i indeks 0, 1, 2, 3, og ved klik af >-button bliver det index 1, 2, 3, 4"
+
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+// Hvor meget den scroller når man trykker på knap
+const scrollAmount = galleryContainer.offsetWidth;
+
+
+nextBtn.addEventListener("click", () => {
+    galleryContainer.scrollLeft += scrollAmount;
+});
+
+prevBtn.addEventListener("click", () => {
+    galleryContainer.scrollLeft -= scrollAmount;
+});
