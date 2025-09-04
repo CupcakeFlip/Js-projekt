@@ -554,20 +554,28 @@ header {
   font-size: var(--font-size-s);
   font-weight: var(--font-weight-regular);
 }
-
 .product-info__gallery-thumbs {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: -1px;
-  margin-bottom: var(--spacing-xxl-px);
-}
-.product-info__color-thumb {
-  border: 1px solid var(--border-subtle);
-  margin-bottom: -1px;
+  gap: 0;
 }
 
+.product-info__color-thumb {
+  border: 1px solid var(--border-subtle);
+  margin: -0.5px;
+}
+
+.product-info__color-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* hover ændrer hele containerens border */
 .product-info__color-thumb:hover {
   border: 1px solid var(--color-black);
+  z-index: 4;
+  cursor: pointer;
 }
 
 .product-info__size-guide {
@@ -580,6 +588,7 @@ header {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: repeat(1, minmax(1px, 1fr));
+  gap: 0;
   margin-top: var(--spacing-s-px);
 }
 
@@ -591,15 +600,22 @@ header {
 
   height: 56px;
   width: 100%;
-  margin-bottom: -1px;
+  margin: -0.5px;
 }
+
 .product-info__size-btn--not-available {
   text-decoration: line-through;
 }
 
 .product-info__size-btn:hover {
   background-color: var(--color-grey-light);
-  border-color: var(--color-black);
+  border: 1px solid var(--color-black);
+  z-index: 3;
+}
+
+.btn-active {
+  border: 1px solid var(--color-black);
+  z-index: 3;
 }
 
 .product-info__add-to-cart {
@@ -766,6 +782,49 @@ a {
   display: inline-block;
 }
 
+.product__container  {
+  min-width: 350px; 
+  height: auto;
+}
+
+#galleri__kobte--ogsaa {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+/*
+.produkt {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  min-width: 150px;
+    border: red 3px solid;
+}*/
+
+.gallery__top {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+}
+
+.scroll__buttons {
+  display: flex;
+}
+
+.scroll__buttons button {
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.product__images {
+  width: 600px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 
 .footer__container {
   display: grid;

@@ -9,33 +9,34 @@
     <script src="js/produkt.js" defer></script>
     <script src="js/indkobskurv.js" defer></script>
     <script src="js/login.js" defer></script>
-    <script src="js/billedgalleri.js" defer></script>
   </head>
   <body>
     <header>
-      
       <nav>
-        <div class="navbar__logo">  <!-- oliver - logo -->
+        <div class="navbar__logo">
+          <!-- oliver - logo -->
           <a href="index.html">
-          <img src="image/Logo.png" alt="Logo">
+            <img src="image/Logo.png" alt="Logo" />
           </a>
-        </div> <!-- oliver - logo slut -->
-      <!-- Joses del af koden -->
-      <button class="hamburger navbar__toggle">&#9776;</button>
-      <button class="navbar__close">✕</button>
-      <div>
-        <ul class="menu navbar__list" id="menu"></ul>
-      </div>
-      <!-- Joses del af koden slut -->
-       <!-- Oliver del af koden start -->
-        <div class="navbar__right"> <!-- ikoner til højre side -->
+        </div>
+        <!-- oliver - logo slut -->
+        <!-- Joses del af koden -->
+        <button class="hamburger navbar__toggle">&#9776;</button>
+        <button class="navbar__close">✕</button>
+        <div>
+          <ul class="menu navbar__list" id="menu"></ul>
+        </div>
+        <!-- Joses del af koden slut -->
+        <!-- Oliver del af koden start -->
+        <div class="navbar__right">
+          <!-- ikoner til højre side -->
           <ul class="navbar__right--icons">
             <li class="navbar__right--menu-icon">
               <button id="Search-button">
                 <img src="image/svgexport-3.svg" alt="Search Icon" />
               </button>
             </li>
-              <li>
+            <li>
               <button id="login-button">
                 <img src="image/svgexport-4.svg" alt="login Icon" />
               </button>
@@ -48,26 +49,29 @@
             <li>
               <button id="shopping-cart-button" class="shopping-cart-button">
                 <img src="image/svgexport-6.svg" alt="cart Icon" />
-                <span id="cart-count" class="navbar__cart-count" data-count="0">0</span>
-             </button>
+                <span id="cart-count" class="navbar__cart-count" data-count="0"
+                  >0</span
+                >
+              </button>
             </li>
           </ul>
         </div>
+      </nav>
+      <!-- ikoner til højre side -->
+      <div class="cart-overlay">
+        <!-- Tom-tilstanden (beholdes) -->
+        <div class="cart-empty">
+          <h3>Kurven er tom</h3>
+          <button class="continueshopping-button">FORTSÆT MED AT HANDLE</button>
+        </div>
+        <!-- Plads til mini-kurv når der er varer tilført (starter skjult primært kun side 2) -->
+        <div class="cart-body hidden"></div>
       </div>
-      </nav> <!-- ikoner til højre side -->     
-          <div class="cart-overlay"> <!-- Tom-tilstanden (beholdes) -->
-            <div class="cart-empty">
-              <h3>Kurven er tom</h3>
-              <button class="continueshopping-button">FORTSÆT MED AT HANDLE</button>
-            </div>
-            <!-- Plads til mini-kurv når der er varer tilført (starter skjult primært kun side 2) -->
-            <div class="cart-body hidden"></div>
-          </div>
-  </header>
+    </header>
 
     <main class="product">
       <!-- Det valgte produkt galleri-->
-      <section id="productGalleri" class="product-gallery">
+      <section id="productGallery" class="product-gallery">
         <img src="image/firstProduct/firstPicture.avif" alt="første" />
         <img src="image/firstProduct/secondPicture.avif" alt="andet" />
         <img src="image/firstProduct/thirdPicture.avif" alt="tredje" />
@@ -90,82 +94,12 @@
           <h2>Farve:</h2>
           <p id="thisProductColor" class="product-info__color">Gråblå</p>
         </div>
-        <div id="selectionContainer" class="product-info__gallery-thumbs">
-          <img
-            class="product-info__color-thumb"
-            src="image/diffColor/grabla.avif"
-            alt="Gråblå" />
-          <img
-            class="product-info__color-thumb"
-            src="image/diffColor/sort.avif"
-            alt="Sort" />
-          <img
-            class="product-info__color-thumb"
-            src="image/diffColor/lysegrameleret.avif"
-            alt="Lysegråmeleret" />
-          <img
-            class="product-info__color-thumb"
-            src="image/diffColor/morkegra.avif"
-            alt="Mørkegrå" />
-          <img
-            class="product-info__color-thumb"
-            src="image/diffColor/hvid.avif"
-            alt="Hvid" />
-          <img
-            class="product-info__color-thumb"
-            src="image/diffColor/cremeStribet.avif"
-            alt="Creme/Stribet" />
-          <img
-            class="product-info__color-thumb"
-            src="image/diffColor/morkMuldvarp.avif"
-            alt="Mørk Muldvarp" />
-          <img
-            class="product-info__color-thumb"
-            src="image/diffColor/lysBeige.avif"
-            alt="lys Beige" />
-          <img
-            class="product-info__color-thumb"
-            src="image/diffColor/vinrod.avif"
-            alt="Vinrød" />
-          <img
-            class="product-info__color-thumb"
-            src="image/diffColor/morkegra2.avif"
-            alt="Mørkegrå" />
-          <img
-            class="product-info__color-thumb"
-            src="image/diffColor/sortHvidStribet.avif"
-            alt="Sort/Hvid Stribet" />
-          <img
-            class="product-info__color-thumb"
-            src="image/diffColor/stovetLysRosa.avif"
-            alt="Støvet Lys Rosa" />
-        </div>
+        <div id="selectionContainer" class="product-info__gallery-thumbs"></div>
         <div id="thisProductSizeSelection" class="product-info__size-selection">
           <h3>Vælg Størrelse</h3>
-          <div id="thisProductSizeContainer" class="product-info__size-list">
-            <button class="product-info__size-btn">XXS</button>
-            <button
-              class="product-info__size-btn product-info__size-btn--not-available">
-              XS
-            </button>
-            <button
-              class="product-info__size-btn product-info__size-btn--not-available">
-              S
-            </button>
-            <button
-              class="product-info__size-btn product-info__size-btn--not-available">
-              M
-            </button>
-            <button
-              class="product-info__size-btn product-info__size-btn--not-available">
-              L
-            </button>
-            <button class="product-info__size-btn">XL</button>
-            <button
-              class="product-info__size-btn product-info__size-btn--not-available">
-              XXL
-            </button>
-          </div>
+          <div
+            id="thisProductSizeContainer"
+            class="product-info__size-list"></div>
         </div>
 
         <a href="#" class="product-info__size-guide">Størrelsesguide</a>
@@ -292,17 +226,18 @@
         <button class="btn btn--inline">Levering og betaling</button>
       </section>
     </main>
+
     <section>
-      <div class="gallery-header">
-        <h2>Ligende varer</h2>
+      <div class="gallery__top">
+        <div class="gallery-header">
+         <h2>Andre købte også</h2>
+        </div>
+        <div class="scroll__buttons">
+          <button id="prevBtn" onclick="">&larr;</button>
+          <button id="nextBtn">&rarr;</button>
+        </div>
       </div>
-      billedgalleri
-    </section>
-    <section>
-      <div class="gallery-header">
-        <h2>Andre købte også</h2>
-      </div>
-      billedgalleri
+      <div id="galleri__kobte--ogsaa"></div>
     </section>
     <section>
       <nav class="breadcrumb">
@@ -310,6 +245,45 @@
         <span class="text--bold">T-shirt i bomuld </span>
       </nav>
     </section>
-    <footer>Footer - Indsæt fra forside</footer>
+    <footer>
+      <div class="footer__container">
+        <div class="footer__column">
+          <h4>Shop</h4>
+          <p>DAME</p>
+          <p>HERRE</p>
+          <p>BØRN</p>
+          <p>HOME</p>
+          <p>BEAUTY</p>
+        </div>
+        <div class="footer__column">
+          <h4>Corporate info</h4>
+          <p>JOB I H&M</p>
+          <p>OM H&M GROUP</p>
+          <p>SUSTAINABILITY H&M GROUP</p>
+          <p>PRESS</p>
+          <p>INVESTOR RELATIONS</p>
+          <p>CORPORATE GOVERNANCE</p>
+          <p>ERKLÆRING OM TILGÆNGELIGHED</p>
+        </div>
+        <div class="footer__column">
+          <h4>Hjælp</h4>
+          <p>KUNDESERVICE</p>
+          <p>MIN KONTO</p>
+          <p>FIND BUTIK</p>
+          <p>VILKÅR & BETINGELSER</p>
+          <p>KONTAKT OS</p>
+          <p>GAVEKORT</p>
+          <p>SIKKER SHOPPING</p>
+          <p>COOKIEMEDDELSELSE</p>
+          <p>COOKIE SETTINGS</p>
+        </div>
+        <div class="footer__column">
+          <h4>Bliv medlem nu</h4>
+          <p>Bliv H&M Member, og få fantastiske rewards!</p>
+          <a href="#">LÆS MERE</a>
+        </div>
+      </div>
+    </footer>
+  <script src="js/billedgalleri.js" defer></script>
   </body>
 </html>
