@@ -171,51 +171,190 @@ button {
   border: none;
 }
 
-/* Header */
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* ------------------------------------------ */
+/*               MENU OG SUBMENU              */
+/* ------------------------------------------ */
+nav {
   padding: 10px 20px;
   background-color: var(--color-white);
-}
-.navbar__left {
   display: flex;
-  flex-direction: row;
-  gap: 10px;
 }
 
-.navbar__left ul {
-  display: flex;
-  align-items: left;
+.menu {
   list-style: none;
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.navbar__left--logo img {
-  width: 37px;
-  height: 24px;
-  margin-right: 10px;
+.menu li {
+  position: relative;
 }
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--color-grey);
+  font-weight: var( --font-weight-regular);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.3s, color 0.3s;
+}
+
+.menu li:hover > a {
+  color: var(--color-black);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Submenu som flex-container med to kolonner */
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: translateX(-100%);
+  opacity: 0;
+  background-color: var(--color-white);
+  padding: 20px;
+  list-style: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  pointer-events: none;
+  width: 50vw;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.submenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.submenu ul:last-child {
+  margin-left: auto; /* Skubber billedlisten længst til højre */
+}
+
+/* Tekster i venstre kolonne */
+.submenu li a {
+  color: var(--color-black);
+  font-weight: var(--font-weight-regular);
+  display: block;
+  padding: 5px 0;
+}
+
+.submenu li a:hover {
+  color: var(--color-grey);
+}
+
+.submenu li img {
+  display: block;
+  max-width: 200px;   /* styrer billedbredde */
+  height: auto;
+  margin-bottom: 10px; /* afstand mellem billederne */
+}
+
+/* Når man hover over li, slider submenuen ind */
+li:hover > .submenu {
+  transform: translateX(0); /* glider ind til sin position */
+  opacity: 1;               /* bliver synlig */
+  pointer-events: auto;     /* submenuen kan klikkes */
+}
+
+.highlight-sub {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-m);
+}
+
+.submenu li.last-chance a {
+  color: var(--color-primary);
+  margin-top: 40px;
+}
+
+.marginTop {
+  margin-top: 40px;
+}
+
+.hamburger,
+.navbar__toggle,
+.navbar__close {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .hamburger,
+  .navbar__close {
+    display: block;
+    font-size: 26px;
+    color: var(--color-black);
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  .navbar__close {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .menu li {
+    flex: 1;
+    text-align: center;
+  }
+
+  .submenu {
+    position: static;
+    display: none;
+    position: static;
+    width: 100%;
+    flex-direction: column;
+    padding: 10px 0;
+    background: var(--color-white);
+    transition: none;
+  }
+
+  .highlight-sub {
+  font-size: var(--font-size-s);
+  }
+
+  .submenu ul:last-child { 
+    display: none; /* skjul billeder */
+  }
+
+  #Search-button,
+  #login-button,
+  .favorite-button,
+  .shopping-cart-button {
+    min-width: 60px;
+  }
+
+  .navbar__logo {
+  width: 500px;
+  }
+}
+/*________JEG (JOSEFINE) HAR TILFØJET OVENSTÅENDE___________________*/
 
 /* HØJRE SIDE: ikoner */
 
-.navbar__right {
-  /* Det her er søgefeltet og knapperne til indkøbskurv favoritter m.m. */
+.navbar__right { /* Det her er søgefeltet og knapperne til indkøbskurv favoritter m.m. */
   display: flex;
   align-items: center;
+  justify-content: flex-end
+  
 }
-.navbar__right ul {
-  /* UL for ikoner gør dem vandret */
+.navbar__right ul{ /* UL for ikoner gør dem vandret */
   display: flex;
   align-items: center;
-  list-style: none;
-  gap: 10px;
+    list-style: none;
+    gap: 10px;
 }
 
-.navbar__right button {
-  /*boksene forsvinder */
+.navbar__right button { /*boksene forsvinder */
   background-color: transparent;
   border: none;
   padding: 8px 12px;
@@ -223,18 +362,143 @@ button {
   font-size: 14px;
   justify-content: center;
 }
-
-.navbar__right button img {
-  /* størrelsen på ikonerne */
+.navbar__right button img { /* størrelsen på ikonerne */
   height: 18px;
   width: auto;
   display: block;
 }
-
-.navbar__cart-count[data-count="0"] {
-  display: none;
+.navbar__cart-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1;
+  background: black;
+  color: white;
 }
 
+/* skjul kun når data-count er "0" */
+.navbar__cart-count[data-count="0"] {
+  display: none; 
+}
+/*header slut */
+/* Kurv */
+header {
+  position: relative;
+}
+
+.cart-overlay {
+  display: none;
+  position: absolute;
+  top: 100%;   /* placér under knappen */
+  right: 0;    /* justér så den flugter til højre */
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  width: 350px;  /* fx en fast bredde */
+  z-index: 1000;
+}
+
+
+.cart-overlay.active {
+  display: block;
+}
+
+.cart-overlay h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.continueshopping-button {
+  background-color: black;   /* sort baggrund, men sker ikke noget */
+  color: white;              /* hvid tekst, men sker ikke noget. */
+  border: none;       
+  padding: 12px 20px;        
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;           
+  width: 100%;              
+  margin-top: 10px;         
+}
+
+.continueshopping-button:hover {
+  background-color: #333;    /* lidt lysere sort på hover */
+}
+/* helper */
+.hidden { display: none; }
+
+/* containeren der får dynamisk indhold når der ER varer */
+.cart-body { padding: 16px; }
+
+/* én varelinje (vi viser pt. første vare) */
+.cart-line {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.cart-line__img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border: 1px solid #eee;
+}
+.cart-line__title { font-weight: 700; margin: 0 0 4px; }
+.cart-line__meta  { font-size: 12px; color: #444; margin: 2px 0; }
+
+/* summering */
+.cart-sum {
+  border-top: 1px solid #e6e6e6;
+  margin-top: 12px;
+  padding-top: 12px;
+}
+.cart-sum__row { display: flex; justify-content: space-between; margin: 6px 0; }
+.cart-sum__total { font-weight: 700; }
+
+/* knapper */
+.cart-actions { margin-top: 16px; }
+.cart-actions .btn {
+  width: 100%;
+  padding: 14px 16px;
+  font-weight: 600;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+.cart-actions .btn--primary { background: #000; color: #fff; margin-bottom: 8px; }
+.cart-actions .btn--secondary { background: #fff; color: #000; }
+/* === logo kommer før burger - ny oliver === */
+.navbar__logo {            
+  display: flex;
+  align-items: center;
+}
+.navbar__logo img { 
+  height: 60px;
+  margin-right: 20px;
+}
+ 
+/* === header alignment justeret - ny oliver === */
+@media (min-width: 961px) {
+  nav {                       
+    display: flex;
+    align-items: center;
+  }
+
+  .menu {                     
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .navbar__right {          
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+}
 /* Header slut */
 
 /*--------------*/
@@ -290,20 +554,28 @@ button {
   font-size: var(--font-size-s);
   font-weight: var(--font-weight-regular);
 }
-
 .product-info__gallery-thumbs {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: -1px;
-  margin-bottom: var(--spacing-xxl-px);
-}
-.product-info__color-thumb {
-  border: 1px solid var(--border-subtle);
-  margin-bottom: -1px;
+  gap: 0;
 }
 
+.product-info__color-thumb {
+  border: 1px solid var(--border-subtle);
+  margin: -0.5px;
+}
+
+.product-info__color-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* hover ændrer hele containerens border */
 .product-info__color-thumb:hover {
   border: 1px solid var(--color-black);
+  z-index: 4;
+  cursor: pointer;
 }
 
 .product-info__size-guide {
@@ -316,6 +588,7 @@ button {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: repeat(1, minmax(1px, 1fr));
+  gap: 0;
   margin-top: var(--spacing-s-px);
 }
 
@@ -327,15 +600,22 @@ button {
 
   height: 56px;
   width: 100%;
-  margin-bottom: -1px;
+  margin: -0.5px;
 }
+
 .product-info__size-btn--not-available {
   text-decoration: line-through;
 }
 
 .product-info__size-btn:hover {
   background-color: var(--color-grey-light);
-  border-color: var(--color-black);
+  border: 1px solid var(--color-black);
+  z-index: 3;
+}
+
+.btn-active {
+  border: 1px solid var(--color-black);
+  z-index: 3;
 }
 
 .product-info__add-to-cart {
@@ -744,4 +1024,63 @@ button.nextbtn {
   text-align:center;
   margin-top: 25px;
   cursor: pointer;
+}
+
+.product__container  {
+  min-width: 350px; 
+  height: auto;
+}
+
+#galleri__kobte--ogsaa {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+/*
+.produkt {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  min-width: 150px;
+    border: red 3px solid;
+}*/
+
+.gallery__top {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+}
+
+.scroll__buttons {
+  display: flex;
+}
+
+.scroll__buttons button {
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.product__images {
+  width: 600px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* fire lige brede kolonner */
+  gap: 2rem;
+  padding-bottom: 5rem;
+}
+
+.footer__column {
+  margin-left: 1.5rem;
+}
+
+.footer__column a {
+  margin-left: 0;
 }

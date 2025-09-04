@@ -1,60 +1,34 @@
 <!DOCTYPE html>
 <html lang="dansk">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Forside</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="js/menu.js" defer></script>
-  <script src="js/login.js" defer></script>
-</head>
-
-<body>
-  <!-- Modalbox -->
-  <div class="modal-overlay" id="loginModal">
-    <div class="login">
-      <span onclick="closeModal()">✕</span>
-      <h2>LOG IND</h2>
-
-      <form class="login-form" onsubmit="return login()">
-        <label for="email">E-mail *</label>
-        <input id="email" type="email" placeholder="E-mail" required>
-
-        <label for="pwd">Password *</label>
-        <input id="pwd" type="password" placeholder="Kodeord" required>
-      
-
-      <div class="remember">
-        <input type="checkbox" id="remember">
-        <label for="remember">Husk mig</label>
-      </div>
-      <input type="submit" value="FORTSÆT" class="nextbtn">
-      <a href="#" class="link">HAR DU GLEMT DIT PASSWORD?</a>
-    </div>
-
-  </form>
-  </div>
-  </div>
-
-  <header>
-    <nav>
-      <div class="navbar">
-        <div class="navbar__left">
-          <div class="navbar__left--logo">
-            <img src="image/hmlogo.svg" alt="Logo" />
-          </div>
-          <div class="navbar__left--menu">
-            <ul>
-              <li>DAME</li>
-              <li>HERRE</li>
-              <li>BØRN</li>
-              <li>HOME</li>
-              <li>BEAUTY</li>
-            </ul>
-          </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forside</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="js/menu.js" defer></script>
+    <script src="js/login.js" defer></script>
+    <script src="js/indkobskurv.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="navbar__logo">
+          <!-- oliver - logo -->
+          <a href="index.html">
+            <img src="image/Logo.png" alt="Logo" />
+          </a>
         </div>
+        <!-- oliver - logo slut -->
+        <!-- Joses del af koden -->
+        <button class="hamburger navbar__toggle">&#9776;</button>
+        <button class="navbar__close">✕</button>
+        <div>
+          <ul class="menu navbar__list" id="menu"></ul>
+        </div>
+        <!-- Joses del af koden slut -->
+        <!-- Oliver del af koden start -->
         <div class="navbar__right">
+          <!-- ikoner til højre side -->
           <ul class="navbar__right--icons">
             <li class="navbar__right--menu-icon">
               <button id="Search-button">
@@ -62,10 +36,9 @@
               </button>
             </li>
             <li>
-              <button id="login-button" onclick="openModal()">
+              <button id="login-button">
                 <img src="image/svgexport-4.svg" alt="login Icon" />
               </button>
-
             </li>
             <li>
               <button class="favorite-button">
@@ -75,11 +48,31 @@
             <li>
               <button id="shopping-cart-button" class="shopping-cart-button">
                 <img src="image/svgexport-6.svg" alt="cart Icon" />
-                <span id="cart-count" class="navbar__cart-count" data-count="0">0</span>
+                <span id="cart-count" class="navbar__cart-count" data-count="0"
+                  >0</span
+                >
               </button>
             </li>
           </ul>
         </div>
+      </nav>
+      <!-- ikoner til højre side -->
+      <div class="cart-overlay">
+        <!-- Tom-tilstanden (beholdes) -->
+        <div class="cart-empty">
+          <h3>Kurven er tom</h3>
+          <button class="continueshopping-button">FORTSÆT MED AT HANDLE</button>
+        </div>
+        <!-- Plads til mini-kurv når der er varer tilført (starter skjult primært kun side 2) -->
+        <div class="cart-body hidden"></div>
+      </div>
+    </header>
+    <main class="main__index">
+      <div class="hero">
+        <img
+          src="image/banner-image.png"
+          alt="Picture of woman wearing a brown leather jacket."
+          id="banner__image" />
       </div>
     </nav>
   </header>
@@ -112,7 +105,44 @@
       <img src="image/nyheder.png" alt="Tøj" />
     </div>
   </main>
-  <footer></footer>
-</body>
-
+    <footer>
+      <div class="footer__container">
+        <div class="footer__column">
+          <h4>Shop</h4>
+          <p>DAME</p>
+          <p>HERRE</p>
+          <p>BØRN</p>
+          <p>HOME</p>
+          <p>BEAUTY</p>
+        </div>
+        <div class="footer__column">
+          <h4>Corporate info</h4>
+          <p>JOB I H&M</p>
+          <p>OM H&M GROUP</p>
+          <p>SUSTAINABILITY H&M GROUP</p>
+          <p>PRESS</p>
+          <p>INVESTOR RELATIONS</p>
+          <p>CORPORATE GOVERNANCE</p>
+          <p>ERKLÆRING OM TILGÆNGELIGHED</p>
+        </div>
+        <div class="footer__column">
+          <h4>Hjælp</h4>
+          <p>KUNDESERVICE</p>
+          <p>MIN KONTO</p>
+          <p>FIND BUTIK</p>
+          <p>VILKÅR & BETINGELSER</p>
+          <p>KONTAKT OS</p>
+          <p>GAVEKORT</p>
+          <p>SIKKER SHOPPING</p>
+          <p>COOKIEMEDDELSELSE</p>
+          <p>COOKIE SETTINGS</p>
+        </div>
+        <div class="footer__column">
+          <h4>Bliv medlem nu</h4>
+          <p>Bliv H&M Member, og få fantastiske rewards!</p>
+          <a href="#">LÆS MERE</a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
