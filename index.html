@@ -10,6 +10,31 @@
     <script src="js/indkobskurv.js" defer></script>
   </head>
   <body>
+     <!-- Modalbox -->
+  <div class="modal-overlay" id="loginModal">
+    <div class="login">
+      <span onclick="closeModal()">✕</span>
+      <h2>LOG IND</h2>
+
+      <form class="login-form" onsubmit="return login()">
+        <label for="email">E-mail *</label>
+        <input id="email" type="email" placeholder="E-mail" required>
+
+        <label for="pwd">Password *</label>
+        <input id="pwd" type="password" placeholder="Kodeord" required>
+      
+
+      <div class="remember">
+        <input type="checkbox" id="remember">
+        <label for="remember">Husk mig</label>
+      </div>
+      <input type="submit" value="FORTSÆT" class="nextbtn">
+      <a href="#" class="link">HAR DU GLEMT DIT PASSWORD?</a>
+    </div>
+
+  </form>
+  </div>
+  </div>
     <header>
       <nav>
         <div class="navbar__logo">
@@ -36,7 +61,7 @@
               </button>
             </li>
             <li>
-              <button id="login-button">
+                <button id="login-button" onclick="openModal()">                
                 <img src="image/svgexport-4.svg" alt="login Icon" />
               </button>
             </li>
@@ -48,9 +73,7 @@
             <li>
               <button id="shopping-cart-button" class="shopping-cart-button">
                 <img src="image/svgexport-6.svg" alt="cart Icon" />
-                <span id="cart-count" class="navbar__cart-count" data-count="0"
-                  >0</span
-                >
+                <span id="cart-count" class="navbar__cart-count" data-count="0">0</span>
               </button>
             </li>
           </ul>

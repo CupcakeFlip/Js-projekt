@@ -11,6 +11,31 @@
     <script src="js/login.js" defer></script>
   </head>
   <body>
+         <!-- Modalbox -->
+  <div class="modal-overlay" id="loginModal">
+    <div class="login">
+      <span onclick="closeModal()">✕</span>
+      <h2>LOG IND</h2>
+
+      <form class="login-form" onsubmit="return login()">
+        <label for="email">E-mail *</label>
+        <input id="email" type="email" placeholder="E-mail" required>
+
+        <label for="pwd">Password *</label>
+        <input id="pwd" type="password" placeholder="Kodeord" required>
+      
+
+      <div class="remember">
+        <input type="checkbox" id="remember">
+        <label for="remember">Husk mig</label>
+      </div>
+      <input type="submit" value="FORTSÆT" class="nextbtn">
+      <a href="#" class="link">HAR DU GLEMT DIT PASSWORD?</a>
+    </div>
+
+  </form>
+  </div>
+  </div>
     <header>
       <nav>
         <div class="navbar__logo">
@@ -37,7 +62,7 @@
               </button>
             </li>
             <li>
-              <button id="login-button">
+              <button id="login-button" onclick="openModal()">                
                 <img src="image/svgexport-4.svg" alt="login Icon" />
               </button>
             </li>
@@ -72,12 +97,7 @@
     <main class="product">
       <!-- Det valgte produkt galleri-->
       <section id="productGallery" class="product-gallery">
-        <img src="image/firstProduct/firstPicture.avif" alt="første" />
-        <img src="image/firstProduct/secondPicture.avif" alt="andet" />
-        <img src="image/firstProduct/thirdPicture.avif" alt="tredje" />
-        <img src="image/firstProduct/fourthPicture.avif" alt="fjerde" />
-        <img src="image/firstProduct/fifthPicture.avif" alt="femte" />
-        <img src="image/firstProduct/sixtPicture.avif" alt="sjette" />
+      
       </section>
       <section id="productInfo" class="product-info">
         <div id="thisProductHeader" class="product-info__header">
