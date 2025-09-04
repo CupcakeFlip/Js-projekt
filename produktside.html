@@ -9,7 +9,6 @@
     <script src="js/produkt.js" defer></script>
     <script src="js/indkobskurv.js" defer></script>
     <script src="js/login.js" defer></script>
-    <script src="js/billedgalleri.js" defer></script>
   </head>
   <body>
     <header>
@@ -227,17 +226,18 @@
         <button class="btn btn--inline">Levering og betaling</button>
       </section>
     </main>
+
     <section>
-      <div class="gallery-header">
-        <h2>Ligende varer</h2>
+      <div class="gallery__top">
+        <div class="gallery-header">
+         <h2>Andre købte også</h2>
+        </div>
+        <div class="scroll__buttons">
+          <button id="prevBtn" onclick="">&larr;</button>
+          <button id="nextBtn">&rarr;</button>
+        </div>
       </div>
-      billedgalleri
-    </section>
-    <section>
-      <div class="gallery-header">
-        <h2>Andre købte også</h2>
-      </div>
-      billedgalleri
+      <div id="galleri__kobte--ogsaa"></div>
     </section>
     <section>
       <nav class="breadcrumb">
@@ -284,5 +284,6 @@
         </div>
       </div>
     </footer>
+  <script src="js/billedgalleri.js" defer></script>
   </body>
 </html>
