@@ -1,3 +1,4 @@
+//Dictes del
 
 const modal = document.getElementById('loginModal');
 
@@ -10,6 +11,7 @@ function closeModal() {
   document.body.style.overflow = ''; // tillad scroll igen
 }
 
+// liste over emails der kan bruges på siden
 const emails = [
   "tbj@ucl.dk",
   "test@haha.dk",
@@ -18,6 +20,7 @@ const emails = [
   "dicte@ersød.dk"
 
 ]
+// liste over koder der kan bruges på siden
 const koder = [
   "hest",
   "lortejavascript",
@@ -27,11 +30,11 @@ const koder = [
 ]
 
 function login() {
-  const email = document.getElementById('email').value;
+  const email = document.getElementById('email').value; 
   const pwd = document.getElementById('pwd').value;
   let isValid = false;
-  for (let i = 0; i < emails.length; i++) {
-    if (email === emails[i] && pwd === koder[i]) {
+  for (let i = 0; i < emails.length; i++) { // går igennem hele listen
+    if (email === emails[i] && pwd === koder[i]) { 
       isValid = true;
       break;
 
@@ -39,10 +42,10 @@ function login() {
   }
 
   if (isValid) {
-    alert("Du er logget ind")
-    window.location.href = "produktside.html"
+    alert("Du er logget ind") //alert når du har gjort det rigtigt
+    window.location.href = "produktside.html";
   } else {
-    alert("Der gik noget galt")
+    alert("Der gik noget galt") //alert når noget er forkert
   }
   return false;
 }

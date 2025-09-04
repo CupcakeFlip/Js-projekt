@@ -615,30 +615,6 @@ button.nextbtn {
   border: 2px solid #000;
 }
 
-/* valid state -> grøn kant */
-.login input.is-valid{
-  border-color: var(--green);
-  background: #fff;
-}
-.login input.is-valid + .icon-check{
-  opacity: 1;
-}
-
-/* invalid state bevarer rød kant */
-.login input.is-invalid{ border-color:#d93025; }
-
-/* ikon til højre i inputs */
-.login .icon-check,
-.login .icon-eye{
-  position: absolute;
-  right: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 24px; height: 24px;
-  pointer-events: none;
-  opacity: .0;
-}
-
 /* placeholder mere “grå” */
 .login input::placeholder{ color:#888787; }
 
@@ -693,12 +669,6 @@ button.nextbtn {
   font-weight: 700;
 }
 
-/* lille hjælpetekst under label (fx validering) */
-.login .hint{
-  margin-top: 6px;
-  font-size: 14px;
-  color: #000000;
-}
 
 .login-form input[type="email"],
 .login-form input[type="password"]{
