@@ -1,109 +1,116 @@
 <!DOCTYPE html>
 <html lang="dansk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Forside</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="js/menu.js" defer></script>
-    <script src="js/login.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="navbar">
-          <div class="navbar__left">
-            <div class="navbar__left--logo">
-              <img src="image/hmlogo.svg" alt="Logo" />
-            </div>
-            <div class="navbar__left--menu">
-              <ul>
-                <li>DAME</li>
-                <li>HERRE</li>
-                <li>BØRN</li>
-                <li>HOME</li>
-                <li>BEAUTY</li>
-              </ul>
-            </div>
-          </div>
-          <div class="navbar__right">
-            <ul class="navbar__right--icons">
-              <li class="navbar__right--menu-icon">
-                <button id="Search-button">
-                  <img src="image/svgexport-3.svg" alt="Search Icon" />
-                </button>
-              </li>
-              <li>
-                <button id="login-button" onclick="openModal()">
-                  <img src="image/svgexport-4.svg" alt="login Icon" />
-                </button>
 
-              </li>
-              <li>
-                <button class="favorite-button">
-                  <img src="image/svgexport-5.svg" alt="favorite Icon" />
-                </button>
-              </li>
-              <li>
-                <button id="shopping-cart-button" class="shopping-cart-button">
-                  <img src="image/svgexport-6.svg" alt="cart Icon" />
-                  <span
-                    id="cart-count"
-                    class="navbar__cart-count"
-                    data-count="0"
-                    >0</span>
-                </button>
-              </li>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forside</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="js/menu.js" defer></script>
+  <script src="js/login.js" defer></script>
+</head>
+
+<body>
+  <!-- Modalbox -->
+  <div class="modal-overlay" id="loginModal">
+    <div class="login">
+      <span onclick="closeModal()">✕</span>
+      <h2>LOG IND</h2>
+
+      <form class="login-form">
+        <label for="email">E-mail *</label>
+        <input id="email" type="email" placeholder="E-mail">
+
+        <label for="pwd">Password *</label>
+        <input id="pwd" type="password" placeholder="Kodeord">
+      </form>
+
+      <div class="remember">
+        <input type="checkbox" id="remember">
+        <label for="remember">Husk mig</label>
+      </div>
+      <input type="submit" value="FORTSÆT" class="nextbtn">
+      <a href="#" class="link">HAR DU GLEMT DIT PASSWORD?</a>
+    </div>
+  </div>
+  </div>
+
+  <header>
+    <nav>
+      <div class="navbar">
+        <div class="navbar__left">
+          <div class="navbar__left--logo">
+            <img src="image/hmlogo.svg" alt="Logo" />
+          </div>
+          <div class="navbar__left--menu">
+            <ul>
+              <li>DAME</li>
+              <li>HERRE</li>
+              <li>BØRN</li>
+              <li>HOME</li>
+              <li>BEAUTY</li>
             </ul>
           </div>
         </div>
+        <div class="navbar__right">
+          <ul class="navbar__right--icons">
+            <li class="navbar__right--menu-icon">
+              <button id="Search-button">
+                <img src="image/svgexport-3.svg" alt="Search Icon" />
+              </button>
+            </li>
+            <li>
+              <button id="login-button" onclick="openModal()">
+                <img src="image/svgexport-4.svg" alt="login Icon" />
+              </button>
 
-<div id="id01" class="login">
-  <span onclick="closeModal()" style="cursor:pointer;">X</span>
-  <h2>Login</h2>
-  <label for="email"><b>Email</b></label>
-  <input type="text" placeholder="E-mail" name="email" required><br><br>
-  <label for="psw"><b>Password</b></label>
-  <input type="password" placeholder="Enter Password" name="psw" required><br><br>
-  <button type="submit">Login</button>
-</div>
-
-
-      </nav>
-    </header>
-    <main class="main__index">
-      <div class="hero">
-        <img
-          src="image/banner-image.png"
-          alt="Picture of woman wearing a brown leather jacket."
-          id="banner__image" />
+            </li>
+            <li>
+              <button class="favorite-button">
+                <img src="image/svgexport-5.svg" alt="favorite Icon" />
+              </button>
+            </li>
+            <li>
+              <button id="shopping-cart-button" class="shopping-cart-button">
+                <img src="image/svgexport-6.svg" alt="cart Icon" />
+                <span id="cart-count" class="navbar__cart-count" data-count="0">0</span>
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
+    </nav>
+  </header>
+
+  <main class="main__index">
+    <div class="hero">
+      <img src="image/banner-image.png" alt="Picture of woman wearing a brown leather jacket." id="banner__image" />
+    </div>
+    <div>
+      <p>FORSPRING PÅ EFTERÅRET</p>
+      <a href="#">SHOP NU</a>
+    </div>
+    <div class="frontpage-images">
       <div>
-        <p>FORSPRING PÅ EFTERÅRET</p>
+        <img src="image/forside-billede1.png" alt="Woman in front of window in a black skirt and brown sweater" />
+        <p>H&M STUDIO PRE-FALL</p>
         <a href="#">SHOP NU</a>
       </div>
-      <div class="frontpage-images">
-        <div>
-          <img
-            src="image/forside-billede1.png"
-            alt="Woman in front of window in a black skirt and brown sweater" />
-          <p>H&M STUDIO PRE-FALL</p>
-          <a href="#">SHOP NU</a>
-        </div>
-        <div>
-          <video autoplay loop muted>
-            <source src="video/forside-video1.mov" type="video/mp4" />
-            Your browser does not support the video tag
-          </video>
-          <p>NOTER FRA PARIS</p>
-          <a href="#">SHOP NU</a>
-        </div>
+      <div>
+        <video autoplay loop muted>
+          <source src="video/forside-video1.mov" type="video/mp4" />
+          Your browser does not support the video tag
+        </video>
+        <p>NOTER FRA PARIS</p>
+        <a href="#">SHOP NU</a>
       </div>
-      <div class="nyheder__items">
-        <p>NYHEDER</p>
-        <img src="image/nyheder.png" alt="Tøj" />
-      </div>
-    </main>
-    <footer></footer>
-  </body>
+    </div>
+    <div class="nyheder__items">
+      <p>NYHEDER</p>
+      <img src="image/nyheder.png" alt="Tøj" />
+    </div>
+  </main>
+  <footer></footer>
+</body>
+
 </html>
