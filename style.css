@@ -781,6 +781,250 @@ a {
   margin-right: 1.2rem;
   display: inline-block;
 }
+/* ========== Modal container ========== */
+
+/* Overlay (skjult indtil .open) */
+.modal-overlay{
+  position: fixed; inset: 0;
+  display: none;
+  align-items: center; justify-content: center;
+  background: rgba(0,0,0,.55);
+  z-index: 10000;
+}
+
+/* Når modal skal vises */
+.modal-overlay.open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login{
+  background:#fff;
+  max-height: 92vh;
+  padding: 32px;
+  width: 400px;
+  height: 600px;
+  box-shadow: 0 8px 40px rgba(0,0,0,.25);
+  position: relative;
+  overflow-y: auto;
+  border-radius: 0;
+}
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-form label{ margin: 0; font-weight: 700; }
+.login-form input{ width:100%; padding:14px; box-sizing:border-box; }
+
+/* Luk-knap */
+.login > span[onclick]{
+  position:absolute; top:16px; right:16px;
+  font-size:26px; cursor:pointer;
+}
+
+/* mørkere overlay som på billedet */
+.login::before{
+  background: rgba(0,0,0,.55);
+}
+
+/* topbar/overskrift */
+.login h2{
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing:.02em;
+  text-transform: uppercase;   /* LOG IND */
+  margin: 0 0 8px;
+}
+
+/* “X”-knap lidt større afstand */
+.login > span[onclick]{
+  top: 16px; right: 16px;
+  font-size: 26px;
+}
+
+/* ========== Labels & inputs ========== */
+.login label{
+  margin: 18px 0 8px;
+  font-weight: 700;            
+}
+
+/* indpak input i en .field for at kunne placere ikoner */
+.login .field{
+  position: relative;
+}
+.actions {
+  display: flex;
+  flex-direction: column; /* Stabler lodret */
+  gap: 40px;              /* Luft mellem elementerne */
+  margin-top: 75px;       /* Luft til resten af formen */
+}
+
+.actions a {
+  text-align: center;     /* Centrer linket */
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.login input[type="email"],
+.login input[type="password"]{
+  width: 100%;
+  height: 56px;                /* lidt højere */
+  padding: 14px 48px 14px 16px;/* plads til ikon til højre */
+  border: 2px solid var(--grey-300);
+  background: #fff;
+  border-radius: 0;
+  font-size: 16px;
+  outline: none;
+}
+
+/* fokus -> sort kant */
+.login input[type="email"]:focus,
+.login input[type="password"]:focus{
+  border-color: var(--black);
+  background: #fff;
+  
+
+}
+button.nextbtn {
+  color: #fff;
+  background: #000;
+  border: 2px solid #000;
+}
+
+/* placeholder mere “grå” */
+.login input::placeholder{ color:#888787; }
+
+/* “Husk mig” checkbox */
+.login .remember{
+  display: flex; align-items:center; gap:12px;
+  margin-top: 14px;
+}
+
+.login .remember input[type="checkbox"]:checked{
+  background: var(--black);
+  /* lille hvid check */
+  background-image:
+    linear-gradient(transparent 60%, transparent 60%),
+    linear-gradient(45deg, transparent 45%, #fff 45%, #fff 55%, transparent 55%),
+    linear-gradient(-45deg, transparent 45%, #fff 45%, #fff 55%, transparent 55%);
+  background-size: 0 0, 60% 60%, 60% 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*  Knapper */
+.login button[type="submit"]{
+  height: 64px;
+  background: var(--black);
+  border: 1px solid var(--black);
+  font-weight: 800;
+  letter-spacing: .02em;
+}
+
+/* sekundær outline-knap */
+.login .btn-outline{
+  display: block;
+  width: 100%;
+  height: 64px;            /* eller brug padding i stedet */
+  padding: 16px 12px;
+  background: #fff;
+  color: #000;
+  border: 2px solid #111;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-align: center;
+}
+
+
+/* link nederst */
+.login .link{
+  display:block;
+  margin: 28px 0 0;
+  text-align: center;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+
+.login-form input[type="email"],
+.login-form input[type="password"]{
+  display: block;
+  width: 100%;
+  height: 56px;
+  padding: 14px 16px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 2px solid #afafaf;   /* grå boks rundt om teksten */
+  border-radius: 0;
+}
+
+.login-form input:focus{
+  border-color: #000000;           /* sort kant ved fokus */
+}
+
+
+/* mindre afstand over knapper/link */
+.actions{
+  display:flex;
+  flex-direction:column;
+  gap:1px;        /* afstand mellem knap og link */
+  margin-top:16px; /* var 75px */
+}
+
+/* lad indhold styre højden */
+.login{
+  height:auto;     /* eller slet linjen helt */
+  max-height:92vh; /* behold denne */
+}
+
+/* fjern ekstra luft på inputs */
+.login input[type="text"],
+.login input[type="password"]{
+  margin-top:0;    /* brug gap i stedet */
+}
+/* vis boks + align tekst */
+.login .remember{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.login .remember input[type="checkbox"]{
+  appearance: none !important;   /* overstyrer den gamle */
+  width: 20px; 
+  height: 20px;
+  border: 2px solid #000;
+  background: #f1f1f1;
+  border-radius: 2px;
+  margin: 0;
+  display: inline-block;
+}
+
+.login .remember input[type="checkbox"]:checked{
+  background: #020101;
+  box-shadow: inset 0 0 0 2px #ffffff; /* “hvidt hak” look */
+}
+
+.login .remember label{ margin: 0; font-weight: 700; }
+
+.nextbtn {
+  display:block;
+  width:100%;
+  height: 60px;
+  background:#000;   /* sort boks */
+  color:#fff;        /* hvid tekst */
+  border:2px solid #000;
+  font-weight:800;
+  letter-spacing:.02em;
+  text-align:center;
+  margin-top: 25px;
+  cursor: pointer;
+}
 
 .product__container  {
   min-width: 350px; 
