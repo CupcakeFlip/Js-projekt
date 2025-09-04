@@ -177,6 +177,7 @@ button {
 nav {
   padding: 10px 20px;
   background-color: var(--color-white);
+  display: flex;
 }
 
 .menu {
@@ -288,7 +289,6 @@ li:hover > .submenu {
     border: none;
     cursor: pointer;
     margin-bottom: 10px;
-
   }
 
   .navbar__close {
@@ -325,6 +325,17 @@ li:hover > .submenu {
   .submenu ul:last-child { 
     display: none; /* skjul billeder */
   }
+
+  #Search-button,
+  #login-button,
+  .favorite-button,
+  .shopping-cart-button {
+    min-width: 60px;
+  }
+
+  .navbar__logo {
+  width: 500px;
+  }
 }
 /*________JEG (JOSEFINE) HAR TILFØJET OVENSTÅENDE___________________*/
 
@@ -333,6 +344,7 @@ li:hover > .submenu {
 .navbar__right { /* Det her er søgefeltet og knapperne til indkøbskurv favoritter m.m. */
   display: flex;
   align-items: center;
+  justify-content: flex-end
   
 }
 .navbar__right ul{ /* UL for ikoner gør dem vandret */
