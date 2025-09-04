@@ -58,7 +58,7 @@ for (let i = 0; i < gallery.length; i++) {
 
 
 /*
-for (let i = 0; i < gallery.length; i++) {
+for (let i = 0; i < gallery.length; i++)
     galleryContainer.innerHTML += "<img src='" + gallery[i].image + "'>";
     galleryContainer.innerHTML += gallery[i].productName;
     galleryContainer.innerHTML += gallery[i].price + " kr.";
@@ -95,13 +95,15 @@ prevBtn.addEventListener("click", () => {
 function updateButtons() {
   if (galleryContainer.scrollLeft <= 0) {
     prevBtn.disabled = true;
-  } else {
+  } 
+  else {
     prevBtn.disabled = false;
   }
 
   if (galleryContainer.scrollLeft + galleryContainer.offsetWidth >= galleryContainer.scrollWidth) {
     nextBtn.disabled = true;
-  } else {
+  } 
+  else {
     nextBtn.disabled = false;
   }
 }
