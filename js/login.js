@@ -1,16 +1,14 @@
 
-  const modal = document.getElementById('loginModal');
-  const email = document.getElementById('email').value;
-  const pwd = document.getElementById('pwd').value;
-  
-  function openModal() {
-    modal.classList.add('open');
-    document.body.style.overflow = 'hidden'; // stop scroll bagved
-  }
-  function closeModal() {
-    modal.classList.remove('open');
-    document.body.style.overflow = ''; // tillad scroll igen
-  }
+const modal = document.getElementById('loginModal');
+
+function openModal() {
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden'; // stop scroll bagved
+}
+function closeModal() {
+  modal.classList.remove('open');
+  document.body.style.overflow = ''; // tillad scroll igen
+}
 
 const emails = [
   "tbj@ucl.dk",
@@ -28,10 +26,23 @@ const koder = [
   "jeghedderthomas"
 ]
 
-function login(){
-if (emails.includes(email))
-{console.log ('email korrekt');
-  alert("du er nu logget ind");
-}
+function login() {
+  const email = document.getElementById('email').value;
+  const pwd = document.getElementById('pwd').value;
+  let isValid = false;
+  for (let i = 0; i < emails.length; i++) {
+    if (email === emails[i]) {
+      isValid = true;
+      break;
+
+    }
+  }
+
+  if (isValid) { 
+    alert("Du er logget ind") 
+  } else { "Der gik noget galt" 
+    return false;
+  }
+  
 }
 
