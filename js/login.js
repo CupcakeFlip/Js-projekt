@@ -31,18 +31,19 @@ function login() {
   const pwd = document.getElementById('pwd').value;
   let isValid = false;
   for (let i = 0; i < emails.length; i++) {
-    if (email === emails[i]) {
+    if (email === emails[i] && pwd === koder[i]) {
       isValid = true;
       break;
 
     }
   }
 
-  if (isValid) { 
-    alert("Du er logget ind") 
-  } else { "Der gik noget galt" 
-    return false;
+  if (isValid) {
+    alert("Du er logget ind")
+    window.location.href = "produktside.html"
+  } else {
+    alert("Der gik noget galt")
   }
-  
+  return false;
 }
 
