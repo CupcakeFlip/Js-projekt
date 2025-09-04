@@ -17,13 +17,13 @@
       <span onclick="closeModal()">✕</span>
       <h2>LOG IND</h2>
 
-      <form class="login-form">
+      <form class="login-form" onsubmit="return login()">
         <label for="email">E-mail *</label>
-        <input id="email" type="email" placeholder="E-mail">
+        <input id="email" type="email" placeholder="E-mail" required>
 
         <label for="pwd">Password *</label>
-        <input id="pwd" type="password" placeholder="Kodeord">
-      </form>
+        <input id="pwd" type="password" placeholder="Kodeord" required>
+      
 
       <div class="remember">
         <input type="checkbox" id="remember">
@@ -32,6 +32,8 @@
       <input type="submit" value="FORTSÆT" class="nextbtn">
       <a href="#" class="link">HAR DU GLEMT DIT PASSWORD?</a>
     </div>
+
+  </form>
   </div>
   </div>
 
